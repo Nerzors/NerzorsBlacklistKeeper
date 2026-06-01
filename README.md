@@ -1,4 +1,8 @@
-# Nerzors Blacklist Keeper V2
+<p align="center">
+   <img src="https://media.nerzors.de/addons/nbk/nbkAddon_Midnight.final-v3.png" height="120"/>
+</p>
+
+<h1 align="center">Nerzors Blacklist Keeper V2</h1>
 
 > Remember the players you never want to group with again - and the good ones too.
 
