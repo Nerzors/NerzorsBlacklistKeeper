@@ -95,6 +95,8 @@ Sharing is peer-to-peer over WoW's addon comm channel - no server, nothing leave
 ## License
 
 Bundled third-party libraries (LibStub, LibDeflate, CallbackHandler) keep their own respective licenses.
+
+**Emvedded Librarys:**
 - [libstub](https://www.curseforge.com/wow/addons/libstub)
 - [callbackhandler](https://www.curseforge.com/wow/addons/callbackhandler)
 - [libdeflate](https://www.curseforge.com/wow/addons/libdeflate)
