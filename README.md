@@ -10,7 +10,7 @@
 
 It also keeps a positive "Remember Me" list for the good ones, tracks your recent party-mates, and can prompt you to rate teammates after a Mythic+ run.
 
-*   **Author:** Nerzors · [www.nerzors.de](https://www.nerzors.de/)
+*   **Author:** Nerzors · [www.nerzors.de](https://www.nerzors.de/) | Co-Author: Veplo(Discord: Veplo)
 *   **Language:** English + Deutsch (auto-detected from your client locale)
 *   **For Game-Version**: Currently for `WOW-RETAIL` only
 
@@ -77,7 +77,6 @@ It also keeps a positive "Remember Me" list for the good ones, tracks your recen
 | <code>/nbk list</code>         |Print the blacklist to chat         |
 | <code>/nbk share name[-realm]</code> |Share via whisper <em>(requires <code>_Sync</code>)</em> |
 | <code>/nbk share guild</code>  |Broadcast to guild <em>(requires <code>_Sync</code>)</em> |
-| <code>/nbk theme [name|list]</code> |Switch / list UI themes             |
 | <code>/nbk news</code>         |Reopen the "What's new?" window     |
 
 `/blacklistkeeper` works as a long-form alias for `/nbk`.
