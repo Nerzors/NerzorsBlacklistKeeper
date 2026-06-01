@@ -1,0 +1,141 @@
+Custom License for 
+┌───────────────────────┐
+│	    Nerzors Addons	│
+│    Author: Nerzors  	|
+│  Web: www.nerzors.de	│
+└───────────────────────┘
+
+This license also applies to additional AddOns from Nerzors.
+This includes the following AddOns and sub-AddOns:
+- NerzorsQoL
+- NerzorsBlacklistKeeper (and its sub-AddOns: _Data, _Tooltip, _Nameplates,
+  _ChatFilters, _GroupFinder, _Sync, _Recents, _RememberMe)
+- NerzorsUILib
+
+Nerzors Addon NC-NRD-ND License (Non-Commercial / No Redistribution / No Derivatives) v1.1
+Effective Date: [2026-01-01]
+
+Copyright (c) 2020-2026 Nerzors.DE
+The contents of this addon, excluding third-party resources, are copyrighted to their authors with all rights reserved.
+
+All rights not explicitly addressed in this license are reserved by the copyright holders.
+
+
+┌───────────────────────┐
+│	       LICENSE 	    	│
+│   Date: [2026-05-03] 	|
+└───────────────────────┘
+1) Definitions
+	1.1 "Software" means this addon and any of its sub-addons, including all
+		code, assets, textures, icons, fonts, sounds, strings, layouts and
+		configuration files authored by the Licensor, but EXCLUDING bundled
+		third-party libraries (e.g. LibStub, LibDeflate, CallbackHandler),
+		which remain governed by their own respective licenses.
+	1.2 "Licensor" means Nerzors (www.nerzors.de), the copyright holder.
+	1.3 "You" / "Licensee" means the individual or entity exercising the
+		permissions granted by this license.
+	1.4 "Non-Commercial Use" means use that is not primarily intended for or
+		directed toward commercial advantage or monetary compensation in
+		connection with the Software itself (e.g. selling, bundling, paywalling
+		or licensing the Software). Featuring the Software in audiovisual
+		content under Section 2.3 is permitted even on monetized channels and
+		is not, by itself, treated as Commercial Use of the Software.
+	1.5 "Commercial Use" means any use of the Software that falls outside
+		Non-Commercial Use, including selling, sublicensing, bundling into a
+		paid product, or charging others for access to the Software files.
+	1.6 "Third Parties" means any person, service, platform or distribution
+		channel other than the Licensor and the Official Sources listed in
+		Section 4.
+	1.7 "Official Sources" means the distribution channels expressly listed in
+		Section 4.1.
+	1.8 "Elements" means individual components of the Software, in whole or in
+		part, including icons, logos, graphics, UI design/layouts, texts/
+		strings, templates, configuration files and code (including small
+		excerpts).
+
+2) License Grant (Non-Commercial Only)
+	2.1 The Licensor grants you a revocable, non-exclusive, non-transferable, non-sublicensable license to use the Software exclusively for Non-Commercial Use to:
+		(a) download (only from official sources pursuant to Section 4),
+		(b) install and run,
+		(c) make a reasonable number of copies for personal backups.
+	2.2 All rights not expressly granted are reserved by the Licensor.
+	2.3 Showcasing / Content Creation (Audiovisual). Notwithstanding Sections
+		2.1 and 3, You are permitted to feature, present, review, preview,
+		stream or record the Software in audiovisual content (e.g. YouTube
+		videos, Twitch streams, social-media clips), INCLUDING on monetized
+		channels, provided that:
+			(a) You do not distribute, host, re-upload or otherwise make the
+				Software files available for download;
+			(b) where You point viewers to a download, You link only to the
+				Official Sources in Section 4;
+			(c) You do not remove, alter or obscure copyright, trademark or
+				license notices that are visible in the Software;
+			(d) You do not present the Software as your own, and do not imply
+				official endorsement, sponsorship or partnership with the
+				Licensor without prior written consent.
+		This permission covers showcasing the Software only and grants no
+		other Commercial Use, no right to redistribute the Software, and no
+		right to create derivative works (Sections 4-6 remain in force).
+
+3) Commercial Use (Only With Written Permission)
+	3.1 Any Commercial Use is strictly prohibited without prior written consent of the Licensor.
+	3.2 For Commercial Use, the Licensor may grant a separate commercial license (possibly for a fee). Contact: DEV@NERZORS.DE.
+
+4) Official Distribution Channels / No Third-Party Downloads
+	4.1 You may obtain and use the Software only from the following “Official Sources”:
+		- NerzorsQOL:
+			- GitHub Releases: https://github.com/Nerzors/NerzorsQoL
+			- Curseforge: https://www.curseforge.com/wow/addons/nerzorsqol Uploaded & Author Nerzors
+			- Wago.io: [...soon...] Uploaded & Author Nerzors
+			- Official download page: https://addons.nerzors.de/nerzorsqol (Alternate: https://addons.eredar.eu/nerzorsqol)
+		- NerzorsBlacklistKeeper:
+			- GitHub Releases: https://github.com/Nerzors/NerzorsBlacklistKeeper
+			- Curseforge: https://www.curseforge.com/wow/addons/nerzorsblacklistkeeper Uploaded & Author Nerzors
+			- Wago.io: [...soon...] Uploaded & Author Nerzors
+			- Official download page: https://addons.nerzors.de/nerzorsblacklistkeeper (Alternate: https://addons.eredar.eu/nerzorsblacklistkeeper)		
+		- NerzorsUILib:
+			- GitHub Releases: https://github.com/Nerzors/NerzorsUILib
+			- Official download page: https://addons.nerzors.de/libs/NerzorsUILib (Alternate: https://addons.eredar.eu/libs/NerzorsUILib)		 
+		Further details (official builds, filenames, verification, planned installers) can be found in OFFICIAL-DOWNLOADS.md.	
+	4.2 You may not distribute/share the Software yourself or through third parties (see definition 1.6).
+	4.3 Sharing links to the official download pages is permitted, as long as you do not host files yourself or redirect in a way that effectively constitutes re-hosting.
+
+5) No Modifications / No Derivative Works
+	5.1 You may not modify the Software and may not create or publish derivative works.
+	5.2 In particular, you may not:
+		(a) create or distribute modified builds/installers/portable versions,
+		(b) decompile, disassemble or reverse engineer the Software,
+		(c) circumvent or remove protection mechanisms.
+	5.3 Exceptions apply only to the extent that mandatory law in your country expressly permits certain actions (e.g., legally permitted interoperability analysis). Where an exception applies, the scope must be limited to what is strictly necessary.
+	
+6) No Extraction of Elements / No Reuse of Components
+	6.1 You may not extract or reuse elements from the Software (definition 1.8), in whole or in part, without prior written consent of the Licensor.
+	6.2 This expressly includes: icons/logos, graphics, UI design/layouts, texts/strings, templates, configuration files, as well as code parts (including small excerpts), unless mandatory law permits otherwise.
+	6.3 The right to describe or review the Software, or to use screenshots for bug reports/feedback, remains unaffected, provided that no Software files are distributed and legal notices are not removed.
+	
+7) Copyright and Notice Obligations
+	7.1 You may not remove, alter, or obscure copyright, trademark, license or other rights notices.
+	7.2 For permissible quotations/illustrations (e.g., a screenshot in an issue), rights notices must remain in place insofar as they are visible.
+
+8) Trademarks / Names
+	8.1 NERZORS and associated logos may be protected by trademark and/or unfair competition law. Use for branding or advertising purposes is prohibited without written consent.
+
+9) Term and Termination
+	9.1 This license remains in effect until terminated.
+	9.2 In the event of a breach of this license, it terminates automatically and immediately. From that point, you must cease all use and delete all copies of the Software in your possession (backups excepted to the extent legally required).
+	
+10) Disclaimer of Warranty
+	10.1 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT ANY WARRANTY, EXPRESS OR IMPLIED, INCLUDING (BUT NOT LIMITED TO) MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+	
+11) Limitation of Liability
+	11.1 To the extent permitted by law, the Licensor shall not be liable for indirect damages, consequential damages, loss of profit, loss of data, or business interruption.
+	11.2 In cases of intent and gross negligence, as well as injury to life, body or health, the statutory provisions apply.
+	
+12) Contact (Commercial License / Permissions)
+	For direct contact regarding a specific addon, you can also use:
+	- NerzorsBlacklistKeeper: nbk.addon@nerzors.de
+	- NerzorsQOL: nqol.addon@nerzors.de
+	- NerzorsUILib-1.0: libs@nerzors.de
+	Or use DEV@NERZORS.DE (Contact form available at https://nerzors.de/en/contact)
+
+	
