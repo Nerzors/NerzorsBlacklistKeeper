@@ -90,13 +90,15 @@ Sharing is peer-to-peer over WoW's addon comm channel - no server, nothing leave
 
 **Auto-Sync** (opt-in) pushes each newly blacklisted entry to your chosen recipients - your guild, online friends on your realm, or a custom name list - the moment you add it, as long as that entry is marked shareable.
 
-> Note: Blizzard's anti-spam means addon whispers only reach recipients who are online and in a recent contact relationship (friend / guildmate / group / recently whispered). Guild channel is the most reliable.
-
 ***
 
 ## License
 
 Bundled third-party libraries (LibStub, LibDeflate, CallbackHandler) keep their own respective licenses.
+- [libstub](https://www.curseforge.com/wow/addons/libstub)
+- [callbackhandler](https://www.curseforge.com/wow/addons/callbackhandler)
+- [libdeflate](https://www.curseforge.com/wow/addons/libdeflate)
+- [libsharedmedia-3.0](https://www.curseforge.com/wow/addons/libsharedmedia-3-0)
 
 ***
 
