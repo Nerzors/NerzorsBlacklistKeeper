@@ -106,7 +106,7 @@ Bundled third-party libraries (LibStub, LibDeflate, CallbackHandler) keep their 
 
 ## Support & contact
 
-*   Website: [www.nerzors.de](https://www.nerzors.de/)
+*   Website: [www.nerzors.de](https://www.nerzors.de/en/)
 *   NerzorsBlacklistKeeper: `nbk.addon@nerzors.de`
 *   Github: [https://github.com/Nerzors/NerzorsBlacklistKeeper/issues](https://github.com/Nerzors/NerzorsBlacklistKeeper/issues)
-*   General: `DEV@NERZORS.DE` · contact form at [nerzors.de/en/contact](https://nerzors.de/en/contact)
+*   General: `DEV@NERZORS.DE` or contact form on [nerzors.de/en/contact](https://nerzors.de/en/#contact)
