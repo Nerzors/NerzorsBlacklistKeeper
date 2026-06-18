@@ -1,8 +1,10 @@
+# Nerzors Blacklist Keeper
+
 <p align="center">
    <img src="https://media.nerzors.de/addons/nbk/nbkAddon_Midnight.final-v3.png" height="120"/>
 </p>
 
-<h1 align="center">Nerzors Blacklist Keeper V2</h1>
+<h1 align="center">Nerzors Blacklist Keeper 2.0</h1>
 
 > Remember the players you never want to group with again - and the good ones too.
 
@@ -10,8 +12,20 @@
 
 It also keeps a positive "Remember Me" list for the good ones, tracks your recent party-mates, and can prompt you to rate teammates after a Mythic+ run.
 
-*   **Author:** Nerzors · [www.nerzors.de](https://www.nerzors.de/) | Co-Author: Veplo(Discord: Veplo)
+> ### ⚠️ Heads up - this is a work in progress
+>
+> **NBK V2 is still in active development**, so a few things you'll spot in
+> here aren't fully wired up yet. V2 is a ground-up rebuild of my old
+> **NBK V1** - back then it wasn't modular at all, which is why V2 looks and
+> behaves pretty differently under the hood.
+>
+> Long story short: **there won't be any more updates for NBK V1.** Its GitHub
+> repo isn't public anymore either. Most of V1's features already made it into
+> V2, so V1 is basically retired, no real reason to keep using it.
+
+*   **Author:** Nerzors · [www.nerzors.de](https://www.nerzors.de) | **Co-Author:** Veplo · [Discord: Veplo](#)
 *   **Language:** English + Deutsch (auto-detected from your client locale)
+*   **Versioning:** while in development it's `2.0.0-dev.<addon-version>`. Once it reaches a stable release the scheme switches to `<addon-version>-<wow-patch>` - e.g. `2.1.1-12.0.5` (addon version paired with the WoW patch it targets).
 *   **For Game-Version**: Currently for `WOW-RETAIL` only
 
 ***
@@ -72,7 +86,7 @@ It also keeps a positive "Remember Me" list for the good ones, tracks your recen
 | <code>/nbk</code>              |Open the main window                |
 | <code>/nbk config</code>       |Open settings                       |
 | <code>/nbk add name[-realm] [reason]</code> |Add a player                        |
-| <code>/nbk removename[-realm]</code> |Remove a player                     |
+| <code>/nbk remove name[-realm]</code> |Remove a player                     |
 | <code>/nbk check name[-realm]</code> |Check whether a player is listed    |
 | <code>/nbk list</code>         |Print the blacklist to chat         |
 | <code>/nbk share name[-realm]</code> |Share via whisper <em>(requires <code>_Sync</code>)</em> |

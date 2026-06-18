@@ -83,19 +83,12 @@ All rights not explicitly addressed in this license are reserved by the copyrigh
 
 4) Official Distribution Channels / No Third-Party Downloads
 	4.1 You may obtain and use the Software only from the following “Official Sources”:
-		- NerzorsQOL:
-			- GitHub Releases: https://github.com/Nerzors/NerzorsQoL
-			- Curseforge: https://www.curseforge.com/wow/addons/nerzorsqol Uploaded & Author Nerzors
-			- Wago.io: [...soon...] Uploaded & Author Nerzors
-			- Official download page: https://addons.nerzors.de/nerzorsqol (Alternate: https://addons.eredar.eu/nerzorsqol)
+
 		- NerzorsBlacklistKeeper:
-			- GitHub Releases: https://github.com/Nerzors/NerzorsBlacklistKeeper
-			- Curseforge: https://www.curseforge.com/wow/addons/nerzorsblacklistkeeper Uploaded & Author Nerzors
-			- Wago.io: [...soon...] Uploaded & Author Nerzors
-			- Official download page: https://addons.nerzors.de/nerzorsblacklistkeeper (Alternate: https://addons.eredar.eu/nerzorsblacklistkeeper)		
-		- NerzorsUILib:
-			- GitHub Releases: https://github.com/Nerzors/NerzorsUILib
-			- Official download page: https://addons.nerzors.de/libs/NerzorsUILib (Alternate: https://addons.eredar.eu/libs/NerzorsUILib)		 
+			- GitHub Releases: [https://github.com/Nerzors/NerzorsBlacklistKeeper](https://github.com/Nerzors/NerzorsBlacklistKeeper)
+			- Curseforge: [https://www.curseforge.com/wow/addons/nerzorsblacklistkeeper](https://www.curseforge.com/wow/addons/nerzorsblacklistkeeper) Uploaded & Author Nerzors
+			- Wago.io: [https://addons.wago.io/addons/nerzorsblacklistkeeper](https://addons.wago.io/addons/nerzorsblacklistkeeper) Uploaded & Author Nerzors
+
 		Further details (official builds, filenames, verification, planned installers) can be found in OFFICIAL-DOWNLOADS.md.	
 	4.2 You may not distribute/share the Software yourself or through third parties (see definition 1.6).
 	4.3 Sharing links to the official download pages is permitted, as long as you do not host files yourself or redirect in a way that effectively constitutes re-hosting.
@@ -134,8 +127,4 @@ All rights not explicitly addressed in this license are reserved by the copyrigh
 12) Contact (Commercial License / Permissions)
 	For direct contact regarding a specific addon, you can also use:
 	- NerzorsBlacklistKeeper: nbk.addon@nerzors.de
-	- NerzorsQOL: nqol.addon@nerzors.de
-	- NerzorsUILib-1.0: libs@nerzors.de
-	Or use DEV@NERZORS.DE (Contact form available at https://nerzors.de/en/contact)
-
-	
+	Or use DEV@NERZORS.DE (Contact form available at https://nerzors.de/en/#contact)
