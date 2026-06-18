@@ -1,5 +1,3 @@
-# Nerzors Blacklist Keeper
-
 <p align="center">
    <img src="https://media.nerzors.de/addons/nbk/nbkAddon_Midnight.final-v3.png" height="120"/>
 </p>
