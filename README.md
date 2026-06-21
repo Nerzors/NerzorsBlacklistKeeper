@@ -1,123 +1,182 @@
-<p align="center">
-   <img src="https://media.nerzors.de/addons/nbk/nbkAddon_Midnight.final-v3.png" height="120"/>
+<div align="center">
+<img src="https://media.nerzors.de/addons/nbk/nbk-banner_og_920x360.jpg" alt="Nerzors Blacklist Keeper Banner"/>
+
+<h1><img src="https://media.nerzors.de/addons/nbk/nbkAddon_Midnight.final-v3.png" width="32" alt="Nerzors Blacklist Keeper Logo"/> Nerzors Blacklist Keeper</h1>
+
+<p><i>Remember the players you never want to group with again... and the good ones too.</i></p>
+
+<p>
+  <a href="https://www.curseforge.com/wow/addons/nerzorsblacklistkeeper">
+    <img src="https://img.shields.io/badge/CurseForge-1B1F2B?style=for-the-badge&logo=curseforge&logoColor=e04e14&labelColor=1B1F2B" alt="CurseForge"/>
+  </a>
+  <a href="https://www.curseforge.com/wow/addons/nerzorsblacklistkeeper">
+    <img src="https://img.shields.io/badge/WoWUp-1B1F2B?style=for-the-badge&logoColor=A87CE8&labelColor=1B1F2B" alt="WoWUp"/>
+  </a>
+  <a href="https://addons.wago.io/addons/nerzorsblacklistkeeper">
+    <img src="https://img.shields.io/badge/Wago.io-1B1F2B?style=for-the-badge&logoColor=A87CE8&labelColor=1B1F2B" alt="Wago.io"/>
+  </a>
 </p>
 
-<h1 align="center">Nerzors Blacklist Keeper 2.0</h1>
+<p>
+  <img src="https://cf.way2muchnoise.eu/1554935.svg?gameVersionTypeId=517" alt="CurseForge Downloads"/>
+  <img src="https://img.shields.io/github/v/release/Nerzors/NerzorsBlacklistKeeper?style=flat-square&color=252669&labelColor=1B1F2B" alt="Latest Release"/>
+  <img src="https://img.shields.io/github/last-commit/Nerzors/NerzorsBlacklistKeeper?style=flat-square&color=A87CE8&labelColor=1B1F2B" alt="Last Commit"/>
+  <img src="https://img.shields.io/github/issues/Nerzors/NerzorsBlacklistKeeper?style=flat-square&color=252669&labelColor=1B1F2B" alt="Open Issues"/>
+  <img src="https://img.shields.io/github/stars/Nerzors/NerzorsBlacklistKeeper?style=flat-square&color=A87CE8&labelColor=1B1F2B" alt="Stars"/>
+</p>
 
-> Remember the players you never want to group with again - and the good ones too.
+</div>
 
-**Nerzors Blacklist Keeper (NBK)** is a modular World of Warcraft addon for keeping a personal blacklist of players (with reasons, notes, mute flags and class info), sharing it with people you trust, and getting a heads-up the moment a blacklisted player shows up in your group, or in chat.
+<br/>
 
-It also keeps a positive "Remember Me" list for the good ones, tracks your recent party-mates, and can prompt you to rate teammates after a Mythic+ run.
+> *"Trust is earned in dungeons and lost in one bad pull."*
 
-> ### ⚠️ Heads up - this is a work in progress
->
-> **NBK V2 is still in active development**, so a few things you'll spot in
-> here aren't fully wired up yet. V2 is a ground-up rebuild of my old
-> **NBK V1** - back then it wasn't modular at all, which is why V2 looks and
-> behaves pretty differently under the hood.
->
-> Long story short: **there won't be any more updates for NBK V1.** Its GitHub
-> repo isn't public anymore either. Most of V1's features already made it into
-> V2, so V1 is basically retired, no real reason to keep using it.
+**Nerzors Blacklist Keeper (NBK)** is a modular addon for World of Warcraft that helps you keep track of players you do, or do not -> want to play with again.
 
-*   **Author:** Nerzors · [www.nerzors.de](https://www.nerzors.de) | **Co-Author:** Veplo · [Discord: Veplo](#)
-*   **Language:** English + Deutsch (auto-detected from your client locale)
-*   **Versioning:** while in development it's `2.0.0-dev.<addon-version>`. Once it reaches a stable release the scheme switches to `<addon-version>-<wow-patch>` - e.g. `2.1.1-12.0.5` (addon version paired with the WoW patch it targets).
-*   **For Game-Version**: Currently for `WOW-RETAIL` only
+Maintain your personal blacklist with reasons, notes, mute flags and class information. Get alerts when blacklisted players appear in your group, group finder or chat.
 
-***
+NBK also includes a positive **Remember Me** list for trusted players, recent party tracking and optional post-run rating prompts. Think of it as your own personal Codex of Allies and Adversaries, minus the Light's judgment, plus a mute button.
+
+---
+
+## Development Status
+
+> [!IMPORTANT]
+> The `Tooltip` sub-addon is gone. Its functionality is now part of the main addon. You no longer need to install `NerzorsBlacklistKeeper_Tooltip` and can delete the old folder.
+
+> NBK V2 is currently in active development.
+
+Version 2 is a full rebuild of the original addon with a modular architecture.
+NBK V1 is retired and will no longer receive updates. *Rest in peace, V1 you served your purpose, like a good DK Ghoul.*
+
+---
+
+## ADDON - Core Information
+
+| Property | Value |
+|----------|-------|
+| Author | Nerzors |
+| Co-Author | Veplo |
+| Language | English / Deutsch |
+| Game Version | WoW Retail |
+| Current Branch | 2.0 Development (2.0.0-dev.0.39.0) |
+
+---
 
 ## Features
 
-*   **Blacklist** with reason presets, free-form notes, per-entry mute, pin, class detection and a sortable, searchable list window.
-*   **Group warning** - chat message, popup and/or sound when a blacklisted player joins your group.
-*   **Tooltip integration** - blacklist / remember-me info right in the unit tooltip.
-*   **Chat filter** - optionally hide messages from blacklisted players, plus a configurable blocked-words / whitelist filter.
-*   **Group Finder (LFG)** - warns when a blacklisted player appears in a Premade Group Finder listing or applies to your group.
-*   **Recents** - tracks the last unique party-mates you grouped with.
-*   **Remember Me** - a positive list with star ratings, notes and an optional post-Mythic+ "rate your group" prompt.
-*   **Sharing / Sync** - peer-to-peer blacklist + remember-me sharing over the addon comm channel (whisper / guild), including per-entry **Auto-Sync**.
-*   **Multi-list Export / Import** - export the blacklist or the remember-me list to a string; import auto-detects which list it is.
+| Module | Description |
+|--------|-------------|
+| Blacklist | Store players with reasons, notes, pins and mute flags |
+| Group Warning | Alerts when blacklisted players join your group |
+| Tooltip | Shows blacklist info in tooltips |
+| Chat Filter | Hide blacklisted players and blocked words |
+| Group Finder | Detect blacklisted players in LFG |
+| Recents | Track recent party members |
+| Remember Me | Positive player list with ratings |
+| Sync | Share and sync entries with trusted players |
 
-***
+---
 
-## Installation
+## Installation (Manual)
 
-1.  Extract so each folder lands directly in your AddOns directory:
+Install folders into:
 
-```
-   World of Warcraft/_retail_/Interface/AddOns/
-   ├── NerzorsBlacklistKeeper_Data        (required - shared assets + libraries)
-   ├── NerzorsBlacklistKeeper             (core)
-   ├── NerzorsBlacklistKeeper_Tooltip
-   ├── NerzorsBlacklistKeeper_ChatFilters
-   ├── NerzorsBlacklistKeeper_GroupFinder
-   ├── NerzorsBlacklistKeeper_Sync
-   ├── NerzorsBlacklistKeeper_Recents
-   └── NerzorsBlacklistKeeper_RememberMe
+```txt
+World of Warcraft/_retail_/Interface/AddOns/
 ```
 
-1.  `NerzorsBlacklistKeeper_Data` is a **hard dependency** for everything else - keep it enabled. The other sub-addons are optional: install only the features you want.
+```txt
+NerzorsBlacklistKeeper_Data
+NerzorsBlacklistKeeper
+NerzorsBlacklistKeeper_ChatFilters
+NerzorsBlacklistKeeper_GroupFinder
+NerzorsBlacklistKeeper_Sync
+NerzorsBlacklistKeeper_Recents
+NerzorsBlacklistKeeper_RememberMe
+```
 
-***
+### Required
+
+- `NerzorsBlacklistKeeper_Data`
+- `NerzorsBlacklistKeeper`
+
+All other modules are optional. Pick your loadout like a talent tree - only take what you'll actually use.
+
+---
 
 ## Modules
 
-| Folder                 |What it adds                                            |Required? |
-| ---------------------- |------------------------------------------------------- |--------- |
-| <code>_Data</code>     |Shared libraries, textures, fonts, sounds.              |<strong>Yes</strong> |
-| <code>NerzorsBlacklistKeeper</code> |Core: blacklist, list window, settings, slash commands. |<strong>Yes</strong> |
-| <code>_Tooltip</code>  |Blacklist / remember-me info in unit tooltips.          |Optional  |
-| <code>_ChatFilters</code> |Hide blacklisted players' chat + blocked-words filter.  |Optional  |
-| <code>_GroupFinder</code> |LFG / Premade Group Finder warnings.                    |Optional  |
-| <code>_Sync</code>     |Peer-to-peer sharing + Auto-Sync.                       |Optional  |
-| <code>_Recents</code>  |Recent party-mate tracking.                             |Optional  |
-| <code>_RememberMe</code> |Positive list, star ratings, Mythic+ prompt.            |Optional  |
+| Folder | Required | Purpose |
+|--------|----------|---------|
+| `_Data` | Yes | Shared assets and libraries |
+| `Core` | Yes | Main addon functionality |
+| `_ChatFilters` | No | Chat filtering |
+| `_GroupFinder` | No | LFG warnings |
+| `_Sync` | No | Sharing & sync |
+| `_Recents` | No | Recent player tracking |
+| `_RememberMe` | No | Positive player list |
 
-***
+---
 
-## Slash commands
+## Slash Commands
 
-| Command                        |Action                              |
-| ------------------------------ |----------------------------------- |
-| <code>/nbk</code>              |Open the main window                |
-| <code>/nbk config</code>       |Open settings                       |
-| <code>/nbk add name[-realm] [reason]</code> |Add a player                        |
-| <code>/nbk remove name[-realm]</code> |Remove a player                     |
-| <code>/nbk check name[-realm]</code> |Check whether a player is listed    |
-| <code>/nbk list</code>         |Print the blacklist to chat         |
-| <code>/nbk share name[-realm]</code> |Share via whisper <em>(requires <code>_Sync</code>)</em> |
-| <code>/nbk share guild</code>  |Broadcast to guild <em>(requires <code>_Sync</code>)</em> |
-| <code>/nbk news</code>         |Reopen the "What's new?" window     |
+| Command | Action |
+|---------|--------|
+| `/nbk` | Open main window |
+| `/nbk config` | Open settings |
+| `/nbk add name` | Add player |
+| `/nbk remove name` | Remove player |
+| `/nbk check name` | Check player |
+| `/nbk list` | Print blacklist |
+| `/nbk news` | Open news window |
 
-`/blacklistkeeper` works as a long-form alias for `/nbk`.
+Alias:
 
-***
+```txt
+/blacklistkeeper
+```
+
+---
 
 ## Sharing & Auto-Sync
 
-Sharing is peer-to-peer over WoW's addon comm channel - no server, nothing leaves the game. You control who you accept shares from (anyone / guild / friends / nobody) in the **Sharing** tab.
+NBK supports peer-to-peer sharing through WoW's addon communication.
 
-**Auto-Sync** (opt-in) pushes each newly blacklisted entry to your chosen recipients - your guild, online friends on your realm, or a custom name list - the moment you add it, as long as that entry is marked shareable.
+You control:
 
-***
+- Who can send entries
+- Who receives sync data
+- Which entries are shareable
 
-## License
+Auto-Sync can instantly share newly added blacklist entries with:
 
-Bundled third-party libraries (LibStub, LibDeflate, CallbackHandler) keep their own respective licenses.
+- Your Guild
+- Friends
+- Custom player lists
 
-**Emvedded Librarys:**
+---
+
+## Embedded Libraries
+
 -   [libstub](https://www.wowace.com/projects/libstub)
 -   [callbackhandler](https://www.wowace.com/projects/callbackhandler)
 -   [libdeflate](https://github.com/SafeteeWoW/LibDeflate)
 -   [libsharedmedia-3.0](https://www.wowace.com/projects/libsharedmedia-3-0)
 
-***
+Libraries retain their original licenses.
 
-## Support & contact
+---
 
-*   Website: [www.nerzors.de](https://www.nerzors.de/en/)
-*   NerzorsBlacklistKeeper: `nbk.addon@nerzors.de`
-*   Github: [https://github.com/Nerzors/NerzorsBlacklistKeeper/issues](https://github.com/Nerzors/NerzorsBlacklistKeeper/issues)
-*   General: `DEV@NERZORS.DE` or contact form on [nerzors.de/en/contact](https://nerzors.de/en/#contact)
+## Support
+
+| Platform | Link |
+|----------|------|
+| 🌐 Website | [www.nerzors.de](https://www.nerzors.de/en/) |
+| 🐛 Issues | [GitHub Issues](https://github.com/Nerzors/NerzorsBlacklistKeeper/issues) |
+| 📬 Addon Mail | [nbk.addon@nerzors.de](mailto:nbk.addon@nerzors.de) |
+| ✉️ General Contact | [dev@nerzors.de](mailto:dev@nerzors.de) |
+
+<div align="center">
+<sub>Created with 🩸&♥️ by Nerzors | because someone has to remember who pulled without asking.</sub>
+</div>
