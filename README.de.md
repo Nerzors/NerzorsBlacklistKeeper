@@ -42,7 +42,7 @@ NBK enthält außerdem eine positive **Remember Me**-Liste für vertrauenswürdi
 ## Entwicklungsstatus
 
 > [!IMPORTANT]
-> Das `Tooltip`-Sub-Addon ist weggefallen. Seine Funktionalität ist jetzt Teil des Hauptaddons. Du musst `NerzorsBlacklistKeeper_Tooltip` nicht mehr installieren und kannst den alten Ordner löschen.
+> Mit Updated `2.0.0-dev.0.39.0`: Das `Tooltip`-Sub-Addon ist weggefallen. Seine Funktionalität ist jetzt Teil des Hauptaddons. Du musst `NerzorsBlacklistKeeper_Tooltip` nicht mehr installieren und kannst den alten Ordner löschen.
 
 > NBK V2 befindet sich aktuell in aktiver Entwicklung.
 
