@@ -43,13 +43,11 @@ NBK also includes a positive **Remember Me** list for trusted players, recent pa
 
 > [!IMPORTANT]
 > **Classic support is here.** One download now covers **Retail, Classic Era
-> and Classic MoP** — the right version is picked automatically by your
-> client, no separate package needed.
+> and Classic MoP** — the right version is picked automatically by your client, no separate package needed.
 > Two modules stay Retail-only because the game systems behind them don't
-> exist on Classic: `_GroupFinder` and `_RememberMe`. On Classic they simply
-> don't show up in your AddOns list.
+> exist on Classic: `_GroupFinder` and `_RememberMe`. On Classic they simply don't show up in your AddOns list.
 
-> [!IMPORTANT]
+> [!NOTE]
 > With Updated `2.0.0-dev.0.39.0`: The `Tooltip` sub-addon is gone. Its functionality is now part of the main addon. You no longer need to install `NerzorsBlacklistKeeper_Tooltip` and can delete the old folder.
 
 > NBK V2 is currently in active development.
@@ -130,8 +128,7 @@ All other modules are optional. Pick your loadout like a talent tree - only take
 
 > **Only want the essentials?** There's a slimmed-down
 > **[Core-Only edition](https://github.com/Nerzors/NerzorsBlacklistKeeperCore)**
-> with just the main addon and its shared assets — no optional modules.
-> Same core features, smaller install.
+> with just the main addon and its shared assets — no optional modules. Same core features, smaller install.
 
 ---
 
@@ -141,7 +138,7 @@ Add-ons by others:
 
 | Module | Author | Purpose |
 |--------|--------|---------|
-| [tRP3_NBK](https://github.com/Nerzors/tRP3_NBK) | Veplo | Total RP 3 integration — surfaces blacklist status inside TRP3 profiles |
+| [tRP3_NBK](https://github.com/Nerzors/tRP3_NBK) | Veplo | Total RP 3 integration - surfaces blacklist status inside TRP3 profiles |
 
 ---
 
