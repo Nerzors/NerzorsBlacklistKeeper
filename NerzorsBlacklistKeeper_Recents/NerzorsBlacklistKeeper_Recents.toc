@@ -1,0 +1,19 @@
+## Interface: 120000, 120001, 120005, 120007
+## Title: |cffbe4ae9NerzorsBlacklistKeeper|r Recents
+# ## Category: |cffbe4ae9NerzorsBlacklistKeeper|r
+## Group: NerzorsBlacklistKeeper
+## Notes: Tracks the last unique party-mates you grouped with
+## Notes-deDE: Speichert deine letzten Gruppenmitglieder (Party, ohne Raid)
+## Author: Nerzors
+## Version: 0.41.1
+## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
+## SavedVariables: NerzorsBlacklistKeeperRecentsDB
+## SavedVariablesPerCharacter: NerzorsBlacklistKeeperRecentsCharDB
+## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Midnight_Logo
+## Category: Social
+## X-Category: Social
+## X-Website: https://nerzors.com/
+
+Locales\enUS.lua
+Locales\deDE.lua
+Recents.lua

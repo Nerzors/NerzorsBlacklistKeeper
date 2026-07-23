@@ -1,0 +1,63 @@
+local NBK = _G.NBK
+if not NBK then return end
+
+NBK:RegisterLocaleStrings("enUS", {
+
+    ["Chat filters"]                          = true,
+    ["Channels"]                              = true,
+    ["Blocked words"]                         = true,
+    ["Whitelist (sender exclusions)"]         = true,
+    ["Statistics"]                            = true,
+
+    ["One name per line. Use Name-Realm to pin a specific realm; bare names match any realm."] = true,
+    ["Censored: %d"]                          = true,
+    ["Hidden: %d"]                            = true,
+    ["Whitelisted: %d"]                       = true,
+    ["Reset statistics"]                      = true,
+
+    ["Enable chat word filter"]               = true,
+    ["Filter mode"]                           = true,
+    ["Censor (replace with ***)"]             = true,
+    ["Hide (drop message)"]                   = true,
+    ["Match whole words only"]                = true,
+    ["Case sensitive"]                        = true,
+    ["One word or phrase per line. Edits save on Apply."] = true,
+    ["Apply"]                                 = true,
+    ["Revert"]                                = true,
+
+    ["Say"]                                   = true,
+    ["Yell"]                                  = true,
+    ["Emote"]                                 = true,
+    ["Party"]                                 = true,
+    ["Party leader"]                          = true,
+    ["Raid"]                                  = true,
+    ["Raid leader"]                           = true,
+    ["Raid warning"]                          = true,
+    ["Instance"]                              = true,
+    ["Instance leader"]                       = true,
+    ["Officer"]                               = true,
+    ["Public channels"]                       = true,
+    ["Channel"]                               = true,
+
+    ["Message history"]                       = true,
+    ["Saved chat from muted blacklisted players."] = true,
+    ["Save muted players' messages"]          = true,
+    ["Keep messages for"]                     = true,
+    ["%d days"]                               = true,
+    ["Forever"]                               = true,
+    ["Open history"]                          = true,
+    ["Clear all history"]                     = true,
+    ["Clear saved messages for all %d players?"] = true,
+    ["Message history cleared."]              = true,
+    ["Saved messages"]                        = true,
+    ["View messages"]                         = true,
+    ["View saved messages"]                   = true,
+    ["Delete history"]                        = true,
+    ["Clear messages"]                        = true,
+    ["Delete all saved messages from %s-%s?"] = true,
+    ["Messages"]                              = true,
+    ["%d msgs"]                               = true,
+    ["Search name, realm..."]                 = true,
+    ["History (%d)"]                          = true,
+
+}, true)

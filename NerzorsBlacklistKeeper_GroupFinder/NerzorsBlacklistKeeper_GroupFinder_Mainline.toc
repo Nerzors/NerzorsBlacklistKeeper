@@ -1,0 +1,17 @@
+## Interface: 120000, 120001, 120005, 120007
+## Title: |cffbe4ae9NerzorsBlacklistKeeper|r Group Finder
+# ## Category: |cffbe4ae9NerzorsBlacklistKeeper|r
+## Group: NerzorsBlacklistKeeper
+## Notes: Surfaces blacklist status inside the Premade Group Finder: flagged search results, application warnings, applicant alerts.
+## Notes-deDE: Zeigt den Blacklist-Status in der Gruppensuche: markierte Sucheinträge, Bewerbungs-Warnungen, Bewerber-Hinweise.
+## Author: Nerzors
+## Version: 0.41.1
+## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
+## SavedVariables: NerzorsBlacklistKeeperGroupFinderDB
+## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Midnight_Logo
+## Category: Social
+
+Locales\enUS.lua
+Locales\deDE.lua
+GroupFinder.lua
+GroupFinderTab.lua
