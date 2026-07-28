@@ -68,18 +68,7 @@ local function channelLabel(msg)
     return map[ch] or ch or "?"
 end
 
-local function splitSender(sender)
-    if not sender then return nil, nil end
-    local name, realm = strsplit("-", sender, 2)
-    if not name then return nil, nil end
-    if not realm then
-        realm = GetNormalizedRealmName()
-    end
-    return name, realm
-end
-
 local function record(name, realm, chToken, channelName, text)
-
     if not name or not text then return end
     local db  = store()
     local key = playerKey(name, realm)
@@ -115,36 +104,16 @@ local function record(name, realm, chToken, channelName, text)
     p.count = #p.messages
 end
 
-local captureFrame
-local function onChatEvent(_, event, text, author, _, _, _, _, _, _, channelBaseName)
-    local s = historySettings()
-    if s.enabled == false then return end
-
+function MessageHistory:RecordFromFilter(name, realm, event, text, channelBaseName)
+    if historySettings().enabled == false then return end
     if type(text) ~= "string" then return end
-
-    local core = NBK.db and NBK.db.settings or {}
-    if core.filterChat == false then return end
-
     local chToken = EVENT_CHANNEL[event]
     if not chToken then return end
-
-    local name, realm = splitSender(author)
     if not name then return end
-
-    if not NBK:IsMuted(name, realm) then return end
 
     record(name, realm, chToken, channelBaseName, text)
 
-    if MessageHistory._tabBuilt then MessageHistory:RefreshTab() end
-end
-
-local function attachCapture()
-    if captureFrame then return end
-    captureFrame = CreateFrame("Frame")
-    for event in pairs(EVENT_CHANNEL) do
-        captureFrame:RegisterEvent(event)
-    end
-    captureFrame:SetScript("OnEvent", onChatEvent)
+    if self._tabBuilt then self:RefreshTab() end
 end
 
 function MessageHistory:Prune()
@@ -226,40 +195,6 @@ end
 
 local detail = {}
 
-local function detailRowBuilder()
-    local NUL = LibStub("NerzorsUILib-1.0")
-    return function(row)
-        local theme = NUL:GetTheme()
-        local time_ = NUL:CreateLabel(row, {
-            text = "", size = "sm", color = theme.colors.text.muted,
-            justifyH = "LEFT", wrap = false,
-        })
-        local chan  = NUL:CreateLabel(row, {
-            text = "", size = "sm", color = theme.colors.accent.primary,
-            justifyH = "LEFT", wrap = false,
-        })
-        local body  = NUL:CreateLabel(row, {
-            text = "", justifyH = "LEFT", wrap = false,
-        })
-
-        local function layout(width)
-            local x = 8
-            time_:ClearAllPoints(); time_:SetWidth(78);  time_:SetPoint("LEFT", row, "LEFT", x, 0); x = x + 78 + 6
-            chan:ClearAllPoints();  chan:SetWidth(72);   chan:SetPoint("LEFT", row, "LEFT", x, 0); x = x + 72 + 6
-            local bodyW = math.max(80, width - x - 8)
-            body:ClearAllPoints(); body:SetWidth(bodyW); body:SetPoint("LEFT", row, "LEFT", x, 0)
-        end
-        row._layout = layout
-
-        return function(r, entry)
-            r._layout(r:GetWidth())
-            time_:SetText(fmtDateTime(entry.t))
-            chan:SetText(channelLabel(entry))
-            body:SetText(entry.msg or "")
-        end
-    end
-end
-
 local function buildDetailWindow()
     if detail.frame then return detail.frame end
     local NUL = LibStub("NerzorsUILib-1.0")
@@ -303,19 +238,107 @@ local function buildDetailWindow()
     })
     clearBtn:SetPoint("BOTTOMRIGHT", 0, 0)
 
-    local list = NUL:ScrollList(content, {
-        rowHeight  = 22,
-        rowBuilder = detailRowBuilder(),
-    })
-    list.container:SetPoint("TOPLEFT",  header, "BOTTOMLEFT", 0, -8)
-    list.container:SetPoint("BOTTOMRIGHT", clearBtn, "TOPRIGHT", 0, 8)
-    detail.list = list
+    local wrap = CreateFrame("Frame", nil, content)
+    wrap:SetPoint("TOPLEFT",     header,   "BOTTOMLEFT", 0, -8)
+    wrap:SetPoint("BOTTOMRIGHT", clearBtn, "TOPRIGHT",   0,  8)
+    detail.bg      = NUL:FillBackground(wrap, NUL:GetTheme().colors.bg.elevated)
+    detail.borders = NUL:AddBorder(wrap, nil, NUL:GetTheme().metrics.borderThickness)
 
-    f:HookScript("OnSizeChanged", function()
-        if detail.list then detail.list:Refresh() end
+    local scroll = CreateFrame("ScrollFrame", nil, wrap, "UIPanelScrollFrameTemplate")
+    scroll:SetPoint("TOPLEFT", 2, -2)
+    scroll:SetPoint("BOTTOMRIGHT", -22, 2)
+    local stack = CreateFrame("Frame", nil, scroll)
+    stack:SetSize(1, 1)
+    scroll:SetScrollChild(stack)
+    NUL:_AttachThemedScrollBar(scroll, wrap)
+
+    detail.scroll = scroll
+    detail.stack  = stack
+    detail.rows   = {}
+
+    scroll:HookScript("OnSizeChanged", function(_, w)
+        if w and w > 1 then stack:SetWidth(w) end
+
+        if detail._reflowQueued then return end
+        detail._reflowQueued = true
+        C_Timer.After(0.08, function()
+            detail._reflowQueued = false
+            if detail.frame and detail.frame:IsShown() then MessageHistory:_LayoutDetail() end
+        end)
     end)
 
     return f
+end
+
+local TIME_W, CHAN_W, GUTTER, BLOCK_GAP = 78, 72, 6, 4
+
+function MessageHistory:_LayoutDetail()
+    local NUL   = LibStub("NerzorsUILib-1.0")
+    local stack = detail.stack
+    if not stack then return end
+
+    local theme = NUL:GetTheme()
+    local width = detail.scroll and detail.scroll:GetWidth() or 0
+    if width < 32 then width = 460 end
+    stack:SetWidth(width)
+
+    local bodyX = 8 + TIME_W + GUTTER + CHAN_W + GUTTER
+    local bodyW = math.max(120, width - bodyX - 8)
+    local y     = 4
+
+    for i, msg in ipairs(detail.msgs or {}) do
+        local block = detail.rows[i]
+        if not block then
+            block = CreateFrame("Frame", nil, stack)
+            block.stripe = block:CreateTexture(nil, "BACKGROUND")
+            block.stripe:SetAllPoints()
+            block.time = NUL:CreateLabel(block, { size = "sm", justifyH = "LEFT", wrap = false })
+            block.chan = NUL:CreateLabel(block, { size = "sm", justifyH = "LEFT", wrap = false })
+            block.body = NUL:CreateLabel(block, { justifyH = "LEFT" })
+            block.body:SetWordWrap(true)
+            detail.rows[i] = block
+        end
+
+        block:ClearAllPoints()
+        block:SetPoint("TOPLEFT",  stack, "TOPLEFT",  0, -y)
+        block:SetPoint("TOPRIGHT", stack, "TOPRIGHT", 0, -y)
+
+        NUL.SetFontColor(block.time, theme.colors.text.muted)
+        NUL.SetFontColor(block.chan, theme.colors.accent.primary)
+        NUL.SetFontColor(block.body, theme.colors.text.primary)
+        block.time:SetText(fmtDateTime(msg.t))
+        block.chan:SetText(channelLabel(msg))
+        block.body:SetText(msg.msg or "")
+
+        block.time:ClearAllPoints()
+        block.time:SetPoint("TOPLEFT", block, "TOPLEFT", 8, -3)
+        block.time:SetWidth(TIME_W)
+        block.chan:ClearAllPoints()
+        block.chan:SetPoint("TOPLEFT", block, "TOPLEFT", 8 + TIME_W + GUTTER, -3)
+        block.chan:SetWidth(CHAN_W)
+        block.body:ClearAllPoints()
+        block.body:SetPoint("TOPLEFT", block, "TOPLEFT", bodyX, -3)
+
+        block.body:SetWidth(bodyW)
+
+        local h = math.max(22, math.ceil(block.body:GetStringHeight() or 16) + 8)
+        block:SetHeight(h)
+
+        if i % 2 == 0 then
+            NUL.SetTextureColor(block.stripe, NUL.WithAlpha(theme.colors.bg.panel, 0.5))
+        else
+            NUL.SetTextureColor(block.stripe, NUL.WithAlpha(theme.colors.bg.panel, 0))
+        end
+
+        block:Show()
+        y = y + h + BLOCK_GAP
+    end
+
+    for i = #(detail.msgs or {}) + 1, #detail.rows do
+        detail.rows[i]:Hide()
+    end
+
+    stack:SetHeight(math.max(1, y))
 end
 
 function MessageHistory:ShowDetail(name, realm)
@@ -335,8 +358,13 @@ function MessageHistory:ShowDetail(name, realm)
     for _, m in ipairs(p.messages or {}) do msgs[#msgs + 1] = m end
     table.sort(msgs, function(a, b) return (a.t or 0) < (b.t or 0) end)
 
-    detail.list:SetData(msgs)
+    detail.msgs = msgs
     f:Show()
+    self:_LayoutDetail()
+
+    C_Timer.After(0, function()
+        if detail.frame and detail.frame:IsShown() then self:_LayoutDetail() end
+    end)
 end
 
 local ROW_HEIGHT = 26
@@ -629,7 +657,6 @@ end
 function MessageHistory:OnEnable()
 
     self:Prune()
-    attachCapture()
 
     local lw = NBK:GetModule("ListWindow")
     if lw and lw.RegisterTab then

@@ -726,6 +726,15 @@ local function buildHeader(parent, theme, columns, self_ref)
     local function paintCell(cell)
         local col = cell._col
         local active = col.sortable and self_ref.sortKey == col.key
+
+        if NBK:PaintColumnHeader(cell, col, active) then
+            if cell._arrow and cell._arrow:IsShown() then
+                cell._arrow:SetTexture(NBK:IconPath(
+                    (active and self_ref.sortDir == "asc") and "arrow-up.png" or "arrow-down.png"))
+            end
+            return
+        end
+
         cell._label:SetText(col.label or "")
         local c = active and theme.colors.accent.primary or theme.colors.text.muted
         NUL.SetFontColor(cell._label, c)
@@ -763,6 +772,8 @@ local function buildHeader(parent, theme, columns, self_ref)
         arrow:SetPoint("RIGHT", cell, "RIGHT", -2, 0)
         arrow:Hide()
         cell._arrow = arrow
+
+        NBK:SetupColumnHeader(cell, col)
 
         if col.sortable then
             cell:EnableMouse(true)
@@ -835,7 +846,7 @@ function RememberMe:_BuildTab(parent)
     tabUI.countLabel = countLabel
 
     local columns = {
-        { key = "class",  label = "",                                width = 22,  sortable = true  },
+        { key = "class",  label = L["Class"] or "Class",             width = 26,  sortable = true, compact = true },
         { key = "name",   label = L["Name"]   or "Name",             width = 170, sortable = true  },
         { key = "rating", label = L["Rating"] or "Rating",           width = 80,  sortable = true  },
         { key = "added",  label = L["Date"]   or "Date",             width = 80,  sortable = true  },

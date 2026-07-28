@@ -316,12 +316,15 @@ local function buildHeader(parent, theme, columns)
         local cell = CreateFrame("Frame", nil, header)
         cell:SetHeight(20)
         local fs = NUL:CreateLabel(cell, {
-            text     = col.label,
+
+            text     = col.compact and "" or col.label,
             size     = "sm",
             color    = theme.colors.text.muted,
             justifyH = "LEFT",
         })
         fs:SetPoint("LEFT", 0, 0); fs:SetPoint("RIGHT", 0, 0)
+        cell._label = fs
+        NBK:SetupColumnHeader(cell, col)
         cells[i] = cell
     end
 
@@ -379,7 +382,7 @@ function Recents:_BuildTab(parent)
     tabUI.hint = hint
 
     local columns = {
-        { key = "class",  label = "",                                    width = 22 },
+        { key = "class",  label = NBK.L["Class"] or "Class",             width = 26, compact = true },
         { key = "name",   label = NBK.L["Name"],                         width = 170 },
         { key = "count",  label = NBK.L["Encounters"] or "Encounters",   width = 60 },
         { key = "seen",   label = NBK.L["Last seen"]  or "Last seen",    width = 100 },
