@@ -11,7 +11,7 @@
 - **List column headers.** In the Blacklist, Remember Me and Recents tabs the class column (as an icon) was too narrow for the word "Class", and "Note" was truncated to "N...". Those columns now show an icon instead of clipped text, with the full name in a hover tooltip.
 - **"Saved messages" window.** Long messages were cut off - they now wrap across multiple lines so the whole text is visible.
 
-## 2.0.0-dev.0.42.0 (by Veplo)
+## 2.0.0-dev.0.43.0 (by Veplo)
 
 ### New
 - **Ignore-list integration.** Optionally, blacklisted players you mute get ignored by the game as well - no chat, no whispers, no invites from them. **Off** by default; turn it on under Settings → Notifications.
