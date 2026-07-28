@@ -5,7 +5,7 @@
 ## Notes: Peer-to-peer blacklist sharing via the AddOn-Comm channel (whisper / guild). Adds the Sharing settings tab and /nbk share commands.
 ## Notes-deDE: Teilen der Blacklist über den AddOn-Comm-Kanal (Flüstern / Gilde). Ergänzt den Reiter "Teilen" und die /nbk share Befehle.
 ## Author: Nerzors
-## Version: 0.41.1
+## Version: 0.43.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperSyncDB
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_classic_Logo

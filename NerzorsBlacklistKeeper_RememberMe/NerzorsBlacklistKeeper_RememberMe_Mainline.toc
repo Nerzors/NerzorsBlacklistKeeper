@@ -5,7 +5,7 @@
 ## Notes: Positive list - remember the good ones. Star rating, notes, M+ post-run prompt.
 ## Notes-deDE: Positive Liste - merk dir die Guten. Sterne-Bewertung, Notizen, M+-Abschluss-Dialog.
 ## Author: Nerzors
-## Version: 0.41.1
+## Version: 0.43.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperRememberMeDB
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Midnight_Logo

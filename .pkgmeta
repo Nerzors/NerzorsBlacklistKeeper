@@ -6,6 +6,7 @@ move-folders:
   NerzorsBlacklistKeeper/NerzorsBlacklistKeeper_GroupFinder: NerzorsBlacklistKeeper_GroupFinder
   NerzorsBlacklistKeeper/NerzorsBlacklistKeeper_Recents: NerzorsBlacklistKeeper_Recents
   NerzorsBlacklistKeeper/NerzorsBlacklistKeeper_RememberMe: NerzorsBlacklistKeeper_RememberMe
+  NerzorsBlacklistKeeper/NerzorsBlacklistKeeper_Statistics: NerzorsBlacklistKeeper_Statistics
   NerzorsBlacklistKeeper/NerzorsBlacklistKeeper_Sync: NerzorsBlacklistKeeper_Sync
 
 externals:
