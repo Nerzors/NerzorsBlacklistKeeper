@@ -1,4 +1,13 @@
-# What's new?
+# What's new? (Last 3 Changes/Updates)
+
+
+## 2.0.0-dev.0.45.0 (by Veplo)
+### New
+- Statistics: "Top realms" card. Shows which realms your blacklist spans, as a ranked bar list just like top reasons and zones.
+- NBK now appears in the game's settings. Options > AddOns has an NBK entry with a button that opens the addon's settings - where you'd look first for any addon.
+
+### Fixed
+- small other thinks
 
 ## 2.0.0-dev.0.44.0 - Fixes
 
@@ -11,7 +20,7 @@
 - **List column headers.** In the Blacklist, Remember Me and Recents tabs the class column (as an icon) was too narrow for the word "Class", and "Note" was truncated to "N...". Those columns now show an icon instead of clipped text, with the full name in a hover tooltip.
 - **"Saved messages" window.** Long messages were cut off - they now wrap across multiple lines so the whole text is visible.
 
-## 2.0.0-dev.0.42.0 (by Veplo)
+## 2.0.0-dev.0.43.0 (by Veplo)
 
 ### New
 - **Ignore-list integration.** Optionally, blacklisted players you mute get ignored by the game as well - no chat, no whispers, no invites from them. **Off** by default; turn it on under Settings → Notifications.
@@ -26,12 +35,3 @@
 - **The minimap tooltip listed "Tooltip" as an active module**, even though
   it has been part of the main addon since 0.39.0.
 - **"Statistics" was missing** from that same list when installed.
-
-## 2.0.0-dev.0.42.0 (by Nerzors)
-
-### New
-- **Statistics tab.** Charts over your own blacklist: entries per month, top reasons and zones, class spread, the players you run into most, and what the chat filters have spared you. Hover any bar for the exact number. It's built entirely from data the addon already collected, so it's meaningful from the very first login instead of starting at zero.
-
-### Fixed
-- **Lua error from Message History in dungeons/raids during combat** (`attempt to compare local 'text' a secret string value`). Chat text is protected inside instances now; the history no longer trips over it.
-- **Dropdowns were missing their arrow**, so they didn't read as dropdowns.

@@ -1,11 +1,11 @@
-## Interface: 120000, 120001, 120005, 120007
+## Interface: 120000, 120001, 120005, 120007, 120100
 ## Title: |cffbe4ae9NerzorsBlacklistKeeper|r Remember Me
 # ## Category: |cffbe4ae9NerzorsBlacklistKeeper|r
 ## Group: NerzorsBlacklistKeeper
 ## Notes: Positive list - remember the good ones. Star rating, notes, M+ post-run prompt.
 ## Notes-deDE: Positive Liste - merk dir die Guten. Sterne-Bewertung, Notizen, M+-Abschluss-Dialog.
 ## Author: Nerzors
-## Version: 0.44.0
+## Version: 0.45.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperRememberMeDB
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Midnight_Logo

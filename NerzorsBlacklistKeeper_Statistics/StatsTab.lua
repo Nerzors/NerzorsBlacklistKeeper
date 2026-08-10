@@ -77,6 +77,8 @@ function StatsTab:_BuildTab(parent)
     t.classCard,      t.classChart      = rankedCard("By class",         "By class")
     t.encountersCard, t.encountersChart = rankedCard("Most encountered", "Most encountered")
 
+    t.realmsCard, t.realmsChart = rankedCard("Top realms", "Top realms")
+
     t.chatCard = NUL:Card(content, { title = L("Chat impact", "Chat impact") })
     local cc = t.chatCard.content
     t.chatTiles = {
@@ -142,6 +144,11 @@ function StatsTab:_Layout()
     placePair(ui.reasonsCard, ui.zonesCard)
     placePair(ui.classCard,   ui.encountersCard)
 
+    ui.realmsCard:SetWidth(w)
+    ui.realmsCard:ClearAllPoints()
+    ui.realmsCard:SetPoint("TOPLEFT", content, "TOPLEFT", 0, -y)
+    y = y + ui.realmsCard:GetHeight() + GAP
+
     if ui.chatCard:IsShown() then
         ui.chatCard:SetWidth(w)
         ui.chatCard:ClearAllPoints()
@@ -196,15 +203,18 @@ function StatsTab:Render()
     ui.zonesChart:SetData(s.topZones)
     ui.classChart:SetData(s.byClass)
     ui.encountersChart:SetData(s.topEncounters)
+    ui.realmsChart:SetData(s.topRealms)
 
     sizeRankedCard(ui.reasonsCard,    ui.reasonsChart)
     sizeRankedCard(ui.zonesCard,      ui.zonesChart)
     sizeRankedCard(ui.classCard,      ui.classChart)
     sizeRankedCard(ui.encountersCard, ui.encountersChart)
+    sizeRankedCard(ui.realmsCard,     ui.realmsChart)
     ui.reasonsChart:SetHeight(ui.reasonsChart:GetNaturalHeight())
     ui.zonesChart:SetHeight(ui.zonesChart:GetNaturalHeight())
     ui.classChart:SetHeight(ui.classChart:GetNaturalHeight())
     ui.encountersChart:SetHeight(ui.encountersChart:GetNaturalHeight())
+    ui.realmsChart:SetHeight(ui.realmsChart:GetNaturalHeight())
 
     local chat = s.chat or {}
     ui.chatTiles[1]:SetShown(chat.hasFilters == true)

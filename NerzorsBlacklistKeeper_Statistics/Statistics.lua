@@ -72,7 +72,7 @@ local function computeEntries(stats)
     local cutoff  = now - 30 * DAY
 
     local monthCounts, monthOrder = buildMonthBuckets()
-    local reasons, zones, classes = {}, {}, {}
+    local reasons, zones, classes, realms = {}, {}, {}, {}
     local encounters = {}
     local total, added30, encTotal = 0, 0, 0
 
@@ -93,6 +93,10 @@ local function computeEntries(stats)
         local zone = trim(e.zone)
         if not zone or zone == "" then zone = L("Unknown", "Unknown") end
         zones[zone] = (zones[zone] or 0) + 1
+
+        local realm = trim(e.realm)
+        if not realm or realm == "" then realm = L("Unknown", "Unknown") end
+        realms[realm] = (realms[realm] or 0) + 1
 
         local cls = e.class or false
         classes[cls] = (classes[cls] or 0) + 1
@@ -139,6 +143,7 @@ local function computeEntries(stats)
     stats.perMonth    = perMonth
     stats.topReasons  = topN(reasons, TOP_N)
     stats.topZones    = topN(zones, TOP_N)
+    stats.topRealms   = topN(realms, TOP_N)
     stats.byClass     = byClass
     stats.topEncounters = encounters
 end

@@ -7,6 +7,7 @@ NBK:RegisterLocaleStrings("deDE", {
     ["Entries per month"]  = "Einträge pro Monat",
     ["Top reasons"]        = "Top-Gründe",
     ["Top zones"]          = "Top-Zonen",
+    ["Top realms"]         = "Top-Realms",
     ["By class"]           = "Nach Klasse",
     ["Most encountered"]   = "Häufigste Begegnungen",
     ["Chat impact"]        = "Chat-Wirkung",
