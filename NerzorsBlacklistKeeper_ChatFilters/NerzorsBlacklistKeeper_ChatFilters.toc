@@ -1,11 +1,11 @@
-## Interface: 120000, 120001, 120005, 120007, 120100
+## Interface: 120007, 120100, 120105
 ## Title: |cffbe4ae9NerzorsBlacklistKeeper|r Chat Filters
 # ## Category: |cffbe4ae9NerzorsBlacklistKeeper|r
 ## Group: NerzorsBlacklistKeeper
 ## Notes: Filters chat messages containing configurable words. Hide or censor mode, per-channel toggles.
 ## Notes-deDE: Filtert Chat-Nachrichten, die konfigurierbare Wörter enthalten. Hide- oder Zensur-Modus, kanalweise schaltbar.
 ## Author: Nerzors
-## Version: 0.45.0
+## Version: 0.46.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperChatFiltersDB, NerzorsBlacklistKeeperChatHistoryDB
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Midnight_Logo
