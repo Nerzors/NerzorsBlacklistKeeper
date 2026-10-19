@@ -2,8 +2,9 @@
 ## Title: |cff48a8dcNerzors|r|cffbe4ae9BlacklistKeeper|r
 ## Notes: |cff48a8dcNerzors|r|cffbe4ae9BlacklistKeeper|r adds a handy blacklist management feature that allows you to quickly block and manage unwanted players.
 ## Notes-deDE: |cff48a8dcNerzors|r|cffbe4ae9BlacklistKeeper|r bietet eine praktische Funktion zur Verwaltung einer Blacklist, mit der du unerwünschte Spieler schnell blockieren und verwalten kannst.
+## Notes-frFR: |cff48a8dcNerzors|r|cffbe4ae9BlacklistKeeper|r propose une fonctionnalité pratique de gestion d'une liste noire, qui te permet de bloquer et de gérer rapidement les joueurs indésirables.
 ## Author: Nerzors
-## Version: 0.46.0
+## Version: 0.46.2
 ## Dependencies: NerzorsBlacklistKeeper_Data
 ## SavedVariables: NBKDB
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_classic_Logo

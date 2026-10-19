@@ -4,8 +4,9 @@
 ## Group: NerzorsBlacklistKeeper
 ## Notes: Tracks the last unique party-mates you grouped with
 ## Notes-deDE: Speichert deine letzten Gruppenmitglieder (Party, ohne Raid)
+## Notes-frFR: Enregistre les derniers membres de ton groupe (groupe, hors raid)
 ## Author: Nerzors
-## Version: 0.46.0
+## Version: 0.46.2
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperRecentsDB
 ## SavedVariablesPerCharacter: NerzorsBlacklistKeeperRecentsCharDB

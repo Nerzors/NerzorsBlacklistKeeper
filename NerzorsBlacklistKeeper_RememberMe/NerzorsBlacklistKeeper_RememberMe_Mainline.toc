@@ -4,6 +4,7 @@
 ## Group: NerzorsBlacklistKeeper
 ## Notes: Positive list - remember the good ones. Star rating, notes, M+ post-run prompt.
 ## Notes-deDE: Positive Liste - merk dir die Guten. Sterne-Bewertung, Notizen, M+-Abschluss-Dialog.
+## Notes-frFR: Liste positive – gardez en mémoire les bons éléments. Évaluation par étoiles, notes, boîte de dialogue de clôture M+.
 ## Author: Nerzors
 ## Version: 0.46.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper

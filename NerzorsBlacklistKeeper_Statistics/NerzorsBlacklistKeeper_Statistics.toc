@@ -4,8 +4,9 @@
 ## Group: NerzorsBlacklistKeeper
 ## Notes: Dashboard with charts over your blacklist: growth, top reasons and zones, class spread, most-encountered players and chat impact.
 ## Notes-deDE: Dashboard mit Diagrammen zu deiner Blacklist: Wachstum, Top-Gründe und -Zonen, Klassenverteilung, häufigste Begegnungen und Chat-Wirkung.
+## Notes-frFR: Liste positive – gardez en mémoire les bons éléments. Évaluation par étoiles, notes, boîte de dialogue de clôture M+.
 ## Author: Nerzors
-## Version: 0.46.0
+## Version: 0.46.2
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Midnight_Logo
 ## Category: Social
