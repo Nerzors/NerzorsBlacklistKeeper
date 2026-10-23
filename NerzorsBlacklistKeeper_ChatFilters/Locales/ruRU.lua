@@ -1,0 +1,62 @@
+local NBK = _G.NBK
+if not NBK then return end
+
+NBK:RegisterLocaleStrings("ruRU", {
+
+    ["Channels"]                              = "Каналы",
+    ["Blocked words"]                         = "Запрещённые слова",
+    ["Whitelist (sender exclusions)"]         = "Белый список (исключённые отправители)",
+    ["Statistics"]                            = "Статистика",
+
+    ["One name per line. Use Name-Realm to pin a specific realm; bare names match any realm."]
+        = "Одно имя на строку. Укажите Имя-Сервер, чтобы выбрать конкретный сервер; имя без сервера подходит для любого.",
+    ["Censored: %d"]                          = "Цензура: %d",
+    ["Hidden: %d"]                            = "Скрыто: %d",
+    ["Whitelisted: %d"]                       = "В белом списке: %d",
+    ["Reset statistics"]                      = "Сбросить статистику",
+
+    ["Enable chat word filter"]               = "Включить фильтр слов в чате",
+    ["Filter mode"]                           = "Режим фильтра",
+    ["Censor (replace with ***)"]             = "Цензура (заменять на ***)",
+    ["Hide (drop message)"]                   = "Скрывать (удалять сообщение)",
+    ["Match whole words only"]                = "Только целые слова",
+    ["Case sensitive"]                        = "Учитывать регистр",
+    ["One word or phrase per line. Edits save on Apply."] = "Одно слово или фраза на строку. Изменения сохраняются кнопкой «Применить».",
+    ["Apply"]                                 = "Применить",
+    ["Revert"]                                = "Отменить изменения",
+
+    ["Say"]                                   = "Речь",
+    ["Yell"]                                  = "Крик",
+    ["Emote"]                                 = "Эмоции",
+    ["Party"]                                 = "Группа",
+    ["Party leader"]                          = "Лидер группы",
+    ["Raid"]                                  = "Рейд",
+    ["Raid leader"]                           = "Лидер рейда",
+    ["Raid warning"]                          = "Объявление рейду",
+    ["Instance"]                              = "Подземелье",
+    ["Instance leader"]                       = "Лидер подземелья",
+    ["Officer"]                               = "Офицер",
+    ["Public channels"]                       = "Общие каналы",
+    ["Channel"]                               = "Канал",
+
+    ["Message history"]                       = "История сообщений",
+    ["Saved chat from muted blacklisted players."] = "Сохранённые сообщения заглушённых игроков из блэклиста.",
+    ["Save muted players' messages"]          = "Сохранять сообщения заглушённых игроков",
+    ["Keep messages for"]                     = "Хранить сообщения",
+    ["%d days"]                               = "%d дней",
+    ["Forever"]                               = "Всегда",
+    ["Open history"]                          = "Открыть историю",
+    ["Clear all history"]                     = "Очистить всю историю",
+    ["Clear saved messages for all %d players?"] = "Удалить сохранённые сообщения всех игроков (%d)?",
+    ["Message history cleared."]              = "История сообщений очищена.",
+    ["Saved messages"]                        = "Сохранённые сообщения",
+    ["View messages"]                         = "Просмотреть сообщения",
+    ["View saved messages"]                   = "Просмотреть сохранённые сообщения",
+    ["Delete history"]                        = "Удалить историю",
+    ["Clear messages"]                        = "Удалить сообщения",
+    ["Delete all saved messages from %s-%s?"] = "Удалить все сохранённые сообщения %s-%s?",
+    ["Messages"]                              = "Сообщения",
+    ["%d msgs"]                               = "%d сообщ.",
+    ["Search name, realm..."]                 = "Поиск: имя, сервер...",
+    ["History (%d)"]                          = "История (%d)",
+})

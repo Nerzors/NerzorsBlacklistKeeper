@@ -113,7 +113,7 @@ local function buildSharingTab(parent)
             local t = (targetBox:GetText() or ""):match("^%s*(.-)%s*$")
             if not t or t == "" then return end
             local ok, sentOrErr = NBK:Share("WHISPER", t, shareListId)
-            if not ok then NBK:Print("share failed:", sentOrErr) end
+            if not ok then NBK:Print(L["share failed:"], L[sentOrErr]) end
         end,
     })
     whisperBtn:SetPoint("LEFT", targetBox, "RIGHT", 8, 0)
@@ -122,7 +122,7 @@ local function buildSharingTab(parent)
         label = L["Guild"] or "Guild", height = 24,
         onClick = function()
             local ok, sentOrErr = NBK:Share("GUILD", nil, shareListId)
-            if not ok then NBK:Print("share failed:", sentOrErr) end
+            if not ok then NBK:Print(L["share failed:"], L[sentOrErr]) end
         end,
     })
     guildBtn:SetPoint("LEFT", whisperBtn, "RIGHT", 8, 0)

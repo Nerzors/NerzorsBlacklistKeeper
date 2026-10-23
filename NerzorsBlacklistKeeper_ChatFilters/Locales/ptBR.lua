@@ -1,0 +1,62 @@
+local NBK = _G.NBK
+if not NBK then return end
+
+NBK:RegisterLocaleStrings("ptBR", {
+
+    ["Channels"]                              = "Canais",
+    ["Blocked words"]                         = "Palavras bloqueadas",
+    ["Whitelist (sender exclusions)"]         = "Lista branca (remetentes excluídos)",
+    ["Statistics"]                            = "Estatísticas",
+
+    ["One name per line. Use Name-Realm to pin a specific realm; bare names match any realm."]
+        = "Um nome por linha. Use Nome-Reino para indicar um reino específico; nomes sem reino valem para qualquer reino.",
+    ["Censored: %d"]                          = "Censuradas: %d",
+    ["Hidden: %d"]                            = "Ocultadas: %d",
+    ["Whitelisted: %d"]                       = "Na lista branca: %d",
+    ["Reset statistics"]                      = "Zerar estatísticas",
+
+    ["Enable chat word filter"]               = "Ativar filtro de palavras no bate-papo",
+    ["Filter mode"]                           = "Modo do filtro",
+    ["Censor (replace with ***)"]             = "Censurar (substituir por ***)",
+    ["Hide (drop message)"]                   = "Ocultar (descartar a mensagem)",
+    ["Match whole words only"]                = "Somente palavras inteiras",
+    ["Case sensitive"]                        = "Diferenciar maiúsculas e minúsculas",
+    ["One word or phrase per line. Edits save on Apply."] = "Uma palavra ou frase por linha. As alterações são salvas em Aplicar.",
+    ["Apply"]                                 = "Aplicar",
+    ["Revert"]                                = "Desfazer",
+
+    ["Say"]                                   = "Dizer",
+    ["Yell"]                                  = "Gritar",
+    ["Emote"]                                 = "Expressão",
+    ["Party"]                                 = "Grupo",
+    ["Party leader"]                          = "Líder do grupo",
+    ["Raid"]                                  = "Raide",
+    ["Raid leader"]                           = "Líder do raide",
+    ["Raid warning"]                          = "Aviso do raide",
+    ["Instance"]                              = "Instância",
+    ["Instance leader"]                       = "Líder da instância",
+    ["Officer"]                               = "Oficial",
+    ["Public channels"]                       = "Canais públicos",
+    ["Channel"]                               = "Canal",
+
+    ["Message history"]                       = "Histórico de mensagens",
+    ["Saved chat from muted blacklisted players."] = "Mensagens salvas de jogadores silenciados da lista negra.",
+    ["Save muted players' messages"]          = "Salvar mensagens de jogadores silenciados",
+    ["Keep messages for"]                     = "Guardar mensagens por",
+    ["%d days"]                               = "%d dias",
+    ["Forever"]                               = "Para sempre",
+    ["Open history"]                          = "Abrir histórico",
+    ["Clear all history"]                     = "Apagar todo o histórico",
+    ["Clear saved messages for all %d players?"] = "Apagar as mensagens salvas dos %d jogadores?",
+    ["Message history cleared."]              = "Histórico de mensagens apagado.",
+    ["Saved messages"]                        = "Mensagens salvas",
+    ["View messages"]                         = "Ver mensagens",
+    ["View saved messages"]                   = "Ver mensagens salvas",
+    ["Delete history"]                        = "Excluir histórico",
+    ["Clear messages"]                        = "Apagar mensagens",
+    ["Delete all saved messages from %s-%s?"] = "Excluir todas as mensagens salvas de %s-%s?",
+    ["Messages"]                              = "Mensagens",
+    ["%d msgs"]                               = "%d msg",
+    ["Search name, realm..."]                 = "Buscar nome, reino...",
+    ["History (%d)"]                          = "Histórico (%d)",
+})

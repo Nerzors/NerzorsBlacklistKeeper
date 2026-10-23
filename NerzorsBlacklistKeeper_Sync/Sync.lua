@@ -640,7 +640,7 @@ end
 function NBK:ShowPendingShare()
     local pending = self._pendingShare
     if not pending then
-        self:Print("no pending share")
+        self:Print(self.L["no pending share"])
         return
     end
     local Config = self:GetModule("Config")

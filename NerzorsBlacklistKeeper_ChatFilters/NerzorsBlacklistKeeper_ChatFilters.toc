@@ -4,15 +4,19 @@
 ## Group: NerzorsBlacklistKeeper
 ## Notes: Filters chat messages containing configurable words. Hide or censor mode, per-channel toggles.
 ## Notes-deDE: Filtert Chat-Nachrichten, die konfigurierbare Wörter enthalten. Hide- oder Zensur-Modus, kanalweise schaltbar.
-## Notes-frFR: Filtre les messages de chat contenant des mots configurables. Mode masquage ou censure, activable par canal.
+## Notes-itIT: Filtra i messaggi di chat che contengono parole configurabili. Modalità nascondi o censura, attivabile per canale.
+## Notes-frFR: Filtre les messages de discussion contenant des mots configurables. Mode masquer ou censurer, activable par canal.
+## Notes-ptBR: Filtra mensagens do chat que contêm palavras configuráveis. Modo ocultar ou censurar, ativável por canal.
+## Notes-esMX: Filtra mensajes del chat que contienen palabras configurables. Modo ocultar o censurar, activable por canal.
+## Notes-esES: Filtra mensajes del chat que contienen palabras configurables. Modo ocultar o censurar, activable por canal.
+## Notes-ruRU: Фильтрует сообщения чата с настраиваемыми словами. Режим скрытия или цензуры, включается для каждого канала.
 ## Author: Nerzors
-## Version: 0.46.2
+## Version: 2.0.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperChatFiltersDB, NerzorsBlacklistKeeperChatHistoryDB
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Midnight_Logo
 ## Category: Social
 
-Locales\enUS.lua
-Locales\deDE.lua
+Locales\Locales.xml
 ChatFilters.lua
 MessageHistory.lua

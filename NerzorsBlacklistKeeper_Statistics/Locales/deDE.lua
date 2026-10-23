@@ -14,7 +14,6 @@ NBK:RegisterLocaleStrings("deDE", {
 
     ["Entries"]            = "Einträge",
     ["New (30 days)"]      = "Neu (30 Tage)",
-    ["Encounters"]         = "Begegnungen",
     ["Messages"]           = "Nachrichten",
 
     ["Censored"]           = "Zensiert",

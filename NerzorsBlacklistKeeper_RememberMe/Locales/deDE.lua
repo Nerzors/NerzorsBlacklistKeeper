@@ -2,7 +2,6 @@ local NBK = _G.NBK
 if not NBK then return end
 
 NBK:RegisterLocaleStrings("deDE", {
-    ["Remember Me"]            = "Merken",
     ["Remembered"]             = "Gemerkt",
 
     ["Add to Remember Me"]      = "Zu Merken hinzufügen",
@@ -28,7 +27,6 @@ NBK:RegisterLocaleStrings("deDE", {
     ["timed"]                = "im Limit",
     ["depleted"]             = "über Zeit",
     ["Rate your party-mates"] = "Bewerte deine Gruppe",
-    ["Done"]                 = "Fertig",
 
     ["%s-%s is on the Blacklist. Remove from Blacklist?"]
         = "%s-%s steht auf der Sperrliste. Von der Sperrliste entfernen?",
@@ -37,4 +35,6 @@ NBK:RegisterLocaleStrings("deDE", {
 
     ["Added %s-%s to Remember Me."]   = "%s-%s zu Merken hinzugefügt.",
     ["Removed %s-%s from Remember Me."] = "%s-%s aus Merken entfernt.",
+
+    ["invalid name/realm"]            = "ungültiger Name/Realm",
 })

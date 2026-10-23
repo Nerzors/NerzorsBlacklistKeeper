@@ -184,13 +184,11 @@ local function sortedPlayers(filter)
 end
 
 local function fmtDate(ts)
-    if not ts then return "-" end
-    return date("%d.%m.%Y", ts)
+    return NBK:FormatDate(ts)
 end
 
 local function fmtDateTime(ts)
-    if not ts then return "-" end
-    return date("%d.%m. %H:%M", ts)
+    return NBK:FormatDateTime(ts)
 end
 
 local detail = {}

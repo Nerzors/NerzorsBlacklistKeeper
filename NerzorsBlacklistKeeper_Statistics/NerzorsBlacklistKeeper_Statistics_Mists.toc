@@ -4,14 +4,18 @@
 ## Group: NerzorsBlacklistKeeper
 ## Notes: Dashboard with charts over your blacklist: growth, top reasons and zones, class spread, most-encountered players and chat impact.
 ## Notes-deDE: Dashboard mit Diagrammen zu deiner Blacklist: Wachstum, Top-Gründe und -Zonen, Klassenverteilung, häufigste Begegnungen und Chat-Wirkung.
-## Notes-frFR: Liste positive – gardez en mémoire les bons éléments. Évaluation par étoiles, notes, boîte de dialogue de clôture M+.
+## Notes-itIT: Dashboard con grafici sulla tua lista nera: crescita, motivi e zone principali, distribuzione delle classi, giocatori incontrati più spesso e impatto sulla chat.
+## Notes-frFR: Tableau de bord avec des graphiques sur votre liste noire : évolution, principales raisons et zones, répartition des classes, joueurs les plus croisés et impact sur la discussion.
+## Notes-ptBR: Painel com gráficos da sua lista negra: crescimento, principais motivos e zonas, distribuição de classes, jogadores mais encontrados e impacto no chat.
+## Notes-esMX: Panel con gráficas de tu lista negra: crecimiento, motivos y zonas principales, reparto de clases, jugadores más encontrados e impacto en el chat.
+## Notes-esES: Panel con gráficos de tu lista negra: crecimiento, motivos y zonas principales, reparto de clases, jugadores más encontrados e impacto en el chat.
+## Notes-ruRU: Панель с графиками по вашему блэклисту: рост, основные причины и зоны, распределение по классам, самые частые встречи и влияние на чат.
 ## Author: Nerzors
-## Version: 0.46.2
+## Version: 2.0.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_classic_Logo
 ## Category: Social
 
-Locales\enUS.lua
-Locales\deDE.lua
+Locales\Locales.xml
 Statistics.lua
 StatsTab.lua

@@ -4,14 +4,19 @@
 ## Group: NerzorsBlacklistKeeper
 ## Notes: Surfaces blacklist status inside the Premade Group Finder: flagged search results, application warnings, applicant alerts.
 ## Notes-deDE: Zeigt den Blacklist-Status in der Gruppensuche: markierte Sucheinträge, Bewerbungs-Warnungen, Bewerber-Hinweise.
+## Notes-itIT: Mostra lo stato della lista nera nella ricerca dei gruppi: risultati contrassegnati, avvisi prima di candidarti e notifiche sui candidati.
+## Notes-frFR: Affiche le statut de liste noire dans la recherche de groupes : résultats signalés, avertissements avant candidature, alertes sur les candidats.
+## Notes-ptBR: Mostra o status da lista negra no Localizador de Grupos: resultados marcados, avisos ao se candidatar e alertas de candidatos.
+## Notes-esMX: Muestra el estado de la lista negra en el buscador de grupos: resultados marcados, avisos al postularte y alertas de solicitantes.
+## Notes-esES: Muestra el estado de la lista negra en el buscador de grupos: resultados marcados, avisos al apuntarte y alertas de solicitantes.
+## Notes-ruRU: Показывает статус блэклиста в поиске групп: отмеченные результаты, предупреждения при подаче заявки и оповещения о кандидатах.
 ## Author: Nerzors
-## Version: 0.46.2
+## Version: 2.0.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperGroupFinderDB
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Midnight_Logo
 ## Category: Social
 
-Locales\enUS.lua
-Locales\deDE.lua
+Locales\Locales.xml
 GroupFinder.lua
 GroupFinderTab.lua

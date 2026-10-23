@@ -3,7 +3,6 @@ if not NBK then return end
 
 NBK:RegisterLocaleStrings("deDE", {
 
-    ["Sharing"]                              = "Sync",
     ["Enable sharing (send & receive)"]      = "Teilen aktivieren (senden & empfangen)",
     ["Accept shares from"]                   = "Empfangen von",
     ["anyone"]                               = "jedem",
@@ -35,15 +34,28 @@ NBK:RegisterLocaleStrings("deDE", {
     ["Tip: addon-whispers need the recipient online + a recent contact relationship (friend / guildmate / group / recent /w). If they see nothing, send them a normal whisper first or use Guild channel."]
         = "Tipp: Addon-Flüstern braucht den Empfänger online + eine Kontakt-Beziehung (Freund / Gildenmitglied / Gruppe / kürzlich geflüstert). Wenn nichts ankommt, schicke ihm zuerst eine normale /w-Nachricht oder nutze den Gilden-Kanal.",
 
+    ["Auto-Sync"]                            = "Auto-Sync",
+    ["Auto-Sync new blacklist entries"]      = "Neue Blacklist-Einträge automatisch teilen",
+    ["Send to"]                              = "Senden an",
+    ["Friends"]                              = "Freunde",
+    ["Specific characters"]                  = "Bestimmte Charaktere",
+    ["Tick the characters that should receive auto-pushes (Name-Realm)."]
+        = "Hake die Charaktere an, die neue Einträge automatisch bekommen sollen (Name-Realm).",
+    ["Name-Realm"]                           = "Name-Realm",
+
     ["Auto-Sync blacklist push"]             = "Auto-Sync Blacklist-Push",
     ["%s wants to share an entry:"]          = "%s möchte einen Eintrag teilen:",
     ["%s auto-shared %s-%s."]                = "%s hat %s-%s automatisch geteilt.",
     ["Reason: %s"]                           = "Grund: %s",
-    ["no reason logged"]                     = "kein Grund hinterlegt",
-    ["Add to blacklist"]                     = "Auf Blacklist setzen",
     ["Decline"]                              = "Ablehnen",
     ["From"]                                 = "Von",
-    ["Reason"]                               = "Grund",
-    ["Note"]                                 = "Notiz",
     ["%s shared %d entries (%s)."]           = "%s hat %d Einträge geteilt (%s).",
+
+    ["missing target"]                       = "kein Empfänger angegeben",
+    ["not in a guild"]                       = "nicht in einer Gilde",
+    ["not in a group"]                       = "nicht in einer Gruppe",
+    ["sync disabled"]                        = "Teilen ist deaktiviert",
+    ["no shareable entries (all marked private)"] = "keine teilbaren Einträge (alle privat)",
+    ["list is empty"]                        = "Liste ist leer",
+    ["no pending share"]                     = "keine empfangene Liste offen",
 })

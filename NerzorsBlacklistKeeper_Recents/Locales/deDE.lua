@@ -2,7 +2,6 @@ local NBK = _G.NBK
 if not NBK then return end
 
 NBK:RegisterLocaleStrings("deDE", {
-    ["Recents"]            = "Letzte Gruppen",
     ["Recent party-mates"] = "Letzte Gruppenmitglieder",
     ["Tracks the last %d unique party-mates (party only - not raid)."]
                            = "Speichert die letzten %d Gruppenmitglieder (nur Party - keine Raids).",

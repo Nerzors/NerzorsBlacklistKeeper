@@ -3,7 +3,6 @@ if not NBK then return end
 
 NBK:RegisterLocaleStrings("enUS", {
 
-    ["Chat filters"]                          = true,
     ["Channels"]                              = true,
     ["Blocked words"]                         = true,
     ["Whitelist (sender exclusions)"]         = true,

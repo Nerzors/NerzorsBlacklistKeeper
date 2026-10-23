@@ -14,7 +14,6 @@ NBK:RegisterLocaleStrings("enUS", {
 
     ["Entries"]            = true,
     ["New (30 days)"]      = true,
-    ["Encounters"]         = true,
     ["Messages"]           = true,
 
     ["Censored"]           = true,
@@ -24,6 +23,9 @@ NBK:RegisterLocaleStrings("enUS", {
     ["No reason"]          = true,
     ["Unknown"]            = true,
     ["No data yet"]        = true,
+
+    ["Statistics needs an updated Data folder"] =
+        "Statistics: please update the NerzorsBlacklistKeeper_Data folder.",
 
     ["Say"]                = true,
     ["Yell"]               = true,

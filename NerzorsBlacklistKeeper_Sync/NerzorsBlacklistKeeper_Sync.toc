@@ -4,15 +4,19 @@
 ## Group: NerzorsBlacklistKeeper
 ## Notes: Peer-to-peer blacklist sharing via the AddOn-Comm channel (whisper / guild). Adds the Sharing settings tab and /nbk share commands.
 ## Notes-deDE: Teilen der Blacklist über den AddOn-Comm-Kanal (Flüstern / Gilde). Ergänzt den Reiter "Teilen" und die /nbk share Befehle.
-## Notes-frFR: Partage de la liste noire via le canal de communication de l'addon (chuchotement / guilde). Ajoute l'onglet « Partage » ainsi que les commandes `/nbk share`.
+## Notes-itIT: Condivisione della lista nera tra giocatori tramite il canale AddOn-Comm (sussurro / gilda). Aggiunge la scheda Condivisione e i comandi /nbk share.
+## Notes-frFR: Partage de liste noire entre joueurs via le canal AddOn-Comm (chuchotement / guilde). Ajoute l'onglet Partage et les commandes /nbk share.
+## Notes-ptBR: Compartilhamento da lista negra entre jogadores pelo canal AddOn-Comm (sussurro / guilda). Adiciona a aba Compartilhar e os comandos /nbk share.
+## Notes-esMX: Comparte la lista negra entre jugadores por el canal AddOn-Comm (susurro / hermandad). Agrega la pestaña Compartir y los comandos /nbk share.
+## Notes-esES: Comparte la lista negra entre jugadores por el canal AddOn-Comm (susurro / hermandad). Añade la pestaña Compartir y los comandos /nbk share.
+## Notes-ruRU: Обмен блэклистом между игроками через канал AddOn-Comm (шёпот / гильдия). Добавляет вкладку «Обмен» и команды /nbk share.
 ## Author: Nerzors
-## Version: 0.46.2
+## Version: 2.0.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperSyncDB
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Midnight_Logo
 ## Category: Social
 
-Locales\enUS.lua
-Locales\deDE.lua
+Locales\Locales.xml
 Sync.lua
 SharingTab.lua

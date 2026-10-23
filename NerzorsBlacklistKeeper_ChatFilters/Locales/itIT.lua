@@ -1,0 +1,62 @@
+local NBK = _G.NBK
+if not NBK then return end
+
+NBK:RegisterLocaleStrings("itIT", {
+
+    ["Channels"]                              = "Canali",
+    ["Blocked words"]                         = "Parole bloccate",
+    ["Whitelist (sender exclusions)"]         = "Lista bianca (mittenti esclusi)",
+    ["Statistics"]                            = "Statistiche",
+
+    ["One name per line. Use Name-Realm to pin a specific realm; bare names match any realm."]
+        = "Un nome per riga. Usa Nome-Reame per indicare un reame preciso; i nomi senza reame valgono per tutti i reami.",
+    ["Censored: %d"]                          = "Censurati: %d",
+    ["Hidden: %d"]                            = "Nascosti: %d",
+    ["Whitelisted: %d"]                       = "In lista bianca: %d",
+    ["Reset statistics"]                      = "Azzera le statistiche",
+
+    ["Enable chat word filter"]               = "Attiva il filtro parole in chat",
+    ["Filter mode"]                           = "Modalità filtro",
+    ["Censor (replace with ***)"]             = "Censura (sostituisci con ***)",
+    ["Hide (drop message)"]                   = "Nascondi (scarta il messaggio)",
+    ["Match whole words only"]                = "Solo parole intere",
+    ["Case sensitive"]                        = "Distingui maiuscole e minuscole",
+    ["One word or phrase per line. Edits save on Apply."] = "Una parola o frase per riga. Le modifiche vengono salvate con Applica.",
+    ["Apply"]                                 = "Applica",
+    ["Revert"]                                = "Ripristina",
+
+    ["Say"]                                   = "Parla",
+    ["Yell"]                                  = "Urla",
+    ["Emote"]                                 = "Emote",
+    ["Party"]                                 = "Gruppo",
+    ["Party leader"]                          = "Capogruppo",
+    ["Raid"]                                  = "Incursione",
+    ["Raid leader"]                           = "Capoincursione",
+    ["Raid warning"]                          = "Avviso incursione",
+    ["Instance"]                              = "Istanza",
+    ["Instance leader"]                       = "Capo istanza",
+    ["Officer"]                               = "Ufficiale",
+    ["Public channels"]                       = "Canali pubblici",
+    ["Channel"]                               = "Canale",
+
+    ["Message history"]                       = "Cronologia messaggi",
+    ["Saved chat from muted blacklisted players."] = "Chat salvata dei giocatori della lista nera silenziati.",
+    ["Save muted players' messages"]          = "Salva i messaggi dei giocatori silenziati",
+    ["Keep messages for"]                     = "Conserva i messaggi per",
+    ["%d days"]                               = "%d giorni",
+    ["Forever"]                               = "Per sempre",
+    ["Open history"]                          = "Apri la cronologia",
+    ["Clear all history"]                     = "Cancella tutta la cronologia",
+    ["Clear saved messages for all %d players?"] = "Cancellare i messaggi salvati di tutti i %d giocatori?",
+    ["Message history cleared."]              = "Cronologia messaggi cancellata.",
+    ["Saved messages"]                        = "Messaggi salvati",
+    ["View messages"]                         = "Mostra i messaggi",
+    ["View saved messages"]                   = "Mostra i messaggi salvati",
+    ["Delete history"]                        = "Elimina la cronologia",
+    ["Clear messages"]                        = "Cancella i messaggi",
+    ["Delete all saved messages from %s-%s?"] = "Eliminare tutti i messaggi salvati di %s-%s?",
+    ["Messages"]                              = "Messaggi",
+    ["%d msgs"]                               = "%d msg",
+    ["Search name, realm..."]                 = "Cerca nome, reame...",
+    ["History (%d)"]                          = "Cronologia (%d)",
+})

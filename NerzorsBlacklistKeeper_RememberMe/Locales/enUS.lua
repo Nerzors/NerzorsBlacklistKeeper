@@ -3,7 +3,6 @@ if not NBK then return end
 
 NBK:RegisterLocaleStrings("enUS", {
 
-    ["Remember Me"]                  = true,
     ["Remembered"]                   = true,
 
     ["Add to Remember Me"]           = true,
@@ -28,11 +27,12 @@ NBK:RegisterLocaleStrings("enUS", {
     ["timed"]                        = true,
     ["depleted"]                     = true,
     ["Rate your party-mates"]        = true,
-    ["Done"]                         = true,
 
     ["%s-%s is on the Blacklist. Remove from Blacklist?"]   = true,
     ["%s-%s is in Remember Me. Remove from Remember Me?"]   = true,
 
     ["Added %s-%s to Remember Me."]  = true,
     ["Removed %s-%s from Remember Me."] = true,
+
+    ["invalid name/realm"]           = true,
 }, true)

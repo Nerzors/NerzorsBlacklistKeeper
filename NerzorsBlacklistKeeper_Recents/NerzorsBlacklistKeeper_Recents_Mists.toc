@@ -4,9 +4,14 @@
 ## Group: NerzorsBlacklistKeeper
 ## Notes: Tracks the last unique party-mates you grouped with
 ## Notes-deDE: Speichert deine letzten Gruppenmitglieder (Party, ohne Raid)
-## Notes-frFR: Enregistre les derniers membres de ton groupe (groupe, hors raid)
+## Notes-itIT: Memorizza i tuoi ultimi compagni di gruppo (gruppo, senza incursioni)
+## Notes-frFR: Mémorise vos derniers coéquipiers de groupe (groupe, sans raid)
+## Notes-ptBR: Guarda seus últimos colegas de grupo (grupo, sem raide)
+## Notes-esMX: Guarda tus últimos compañeros de grupo (grupo, sin banda)
+## Notes-esES: Guarda tus últimos compañeros de grupo (grupo, sin banda)
+## Notes-ruRU: Запоминает ваших последних союзников по группе (группа, без рейдов)
 ## Author: Nerzors
-## Version: 0.46.2
+## Version: 2.0.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperRecentsDB
 ## SavedVariablesPerCharacter: NerzorsBlacklistKeeperRecentsCharDB
@@ -15,6 +20,5 @@
 ## X-Category: Social
 ## X-Website: https://nerzors.com/
 
-Locales\enUS.lua
-Locales\deDE.lua
+Locales\Locales.xml
 Recents.lua

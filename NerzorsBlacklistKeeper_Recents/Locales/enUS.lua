@@ -2,7 +2,6 @@ local NBK = _G.NBK
 if not NBK then return end
 
 NBK:RegisterLocaleStrings("enUS", {
-    ["Recents"]                                                 = true,
     ["Recent party-mates"]                                      = true,
     ["Tracks the last %d unique party-mates (party only - not raid)."] = true,
     ["Recents (%d / %d)"]                                       = true,

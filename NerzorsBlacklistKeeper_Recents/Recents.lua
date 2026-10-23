@@ -21,8 +21,7 @@ local Recents = NBK:RegisterModule("Recents")
 local function L() return NBK.L end
 
 local function formatDate(ts)
-    if not ts then return "-" end
-    return date("%d.%m.%Y", ts)
+    return NBK:FormatDate(ts)
 end
 
 local function settings()

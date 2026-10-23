@@ -19,8 +19,7 @@ NBK:RegisterAddonDB({
 local RememberMe = NBK:RegisterModule("RememberMe")
 
 local function formatDate(ts)
-    if not ts then return "-" end
-    return date("%d.%m.%Y", ts)
+    return NBK:FormatDate(ts)
 end
 
 local function normalizeKey(name, realm)
@@ -517,7 +516,8 @@ local function buildDialog(globalName, titleKey)
             local values = self:GetValues()
             local ok, err = cb(values)
             if ok ~= false then self:Hide() end
-            if err then NBK:Print(err) end
+
+            if err then NBK:Print(NBK.L[err]) end
         end)
     end
 

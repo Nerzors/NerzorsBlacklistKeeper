@@ -1,0 +1,62 @@
+local NBK = _G.NBK
+if not NBK then return end
+
+NBK:RegisterLocaleStrings("esMX", {
+
+    ["Channels"]                              = "Canales",
+    ["Blocked words"]                         = "Palabras bloqueadas",
+    ["Whitelist (sender exclusions)"]         = "Lista blanca (remitentes excluidos)",
+    ["Statistics"]                            = "Estadísticas",
+
+    ["One name per line. Use Name-Realm to pin a specific realm; bare names match any realm."]
+        = "Un nombre por línea. Usa Nombre-Reino para indicar un reino concreto; un nombre sin reino vale para todos.",
+    ["Censored: %d"]                          = "Censurados: %d",
+    ["Hidden: %d"]                            = "Ocultos: %d",
+    ["Whitelisted: %d"]                       = "En lista blanca: %d",
+    ["Reset statistics"]                      = "Restablecer estadísticas",
+
+    ["Enable chat word filter"]               = "Activar filtro de palabras del chat",
+    ["Filter mode"]                           = "Modo de filtro",
+    ["Censor (replace with ***)"]             = "Censurar (reemplazar con ***)",
+    ["Hide (drop message)"]                   = "Ocultar (descartar el mensaje)",
+    ["Match whole words only"]                = "Solo palabras completas",
+    ["Case sensitive"]                        = "Distinguir mayúsculas y minúsculas",
+    ["One word or phrase per line. Edits save on Apply."] = "Una palabra o frase por línea. Los cambios se guardan con Aplicar.",
+    ["Apply"]                                 = "Aplicar",
+    ["Revert"]                                = "Deshacer",
+
+    ["Say"]                                   = "Hablar",
+    ["Yell"]                                  = "Gritar",
+    ["Emote"]                                 = "Emoción",
+    ["Party"]                                 = "Grupo",
+    ["Party leader"]                          = "Líder del grupo",
+    ["Raid"]                                  = "Banda",
+    ["Raid leader"]                           = "Líder de banda",
+    ["Raid warning"]                          = "Aviso de la banda",
+    ["Instance"]                              = "Estancia",
+    ["Instance leader"]                       = "Líder de estancia",
+    ["Officer"]                               = "Oficial",
+    ["Public channels"]                       = "Canales públicos",
+    ["Channel"]                               = "Canal",
+
+    ["Message history"]                       = "Historial de mensajes",
+    ["Saved chat from muted blacklisted players."] = "Mensajes guardados de jugadores silenciados de la lista negra.",
+    ["Save muted players' messages"]          = "Guardar los mensajes de jugadores silenciados",
+    ["Keep messages for"]                     = "Conservar mensajes durante",
+    ["%d days"]                               = "%d días",
+    ["Forever"]                               = "Siempre",
+    ["Open history"]                          = "Abrir historial",
+    ["Clear all history"]                     = "Borrar todo el historial",
+    ["Clear saved messages for all %d players?"] = "¿Borrar los mensajes guardados de los %d jugadores?",
+    ["Message history cleared."]              = "Historial de mensajes borrado.",
+    ["Saved messages"]                        = "Mensajes guardados",
+    ["View messages"]                         = "Ver mensajes",
+    ["View saved messages"]                   = "Ver mensajes guardados",
+    ["Delete history"]                        = "Eliminar historial",
+    ["Clear messages"]                        = "Borrar mensajes",
+    ["Delete all saved messages from %s-%s?"] = "¿Eliminar todos los mensajes guardados de %s-%s?",
+    ["Messages"]                              = "Mensajes",
+    ["%d msgs"]                               = "%d mens.",
+    ["Search name, realm..."]                 = "Buscar nombre, reino...",
+    ["History (%d)"]                          = "Historial (%d)",
+})

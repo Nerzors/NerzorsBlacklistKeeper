@@ -4,14 +4,18 @@
 ## Group: NerzorsBlacklistKeeper
 ## Notes: Positive list - remember the good ones. Star rating, notes, M+ post-run prompt.
 ## Notes-deDE: Positive Liste - merk dir die Guten. Sterne-Bewertung, Notizen, M+-Abschluss-Dialog.
-## Notes-frFR: Liste positive – gardez en mémoire les bons éléments. Évaluation par étoiles, notes, boîte de dialogue de clôture M+.
+## Notes-itIT: Lista positiva: ricorda i giocatori migliori. Valutazione a stelle, note, richiesta dopo una M+.
+## Notes-frFR: Liste positive : retenez les bons joueurs. Évaluation par étoiles, notes, invite après une M+.
+## Notes-ptBR: Lista positiva: lembre-se dos bons jogadores. Avaliação por estrelas, notas, aviso após uma M+.
+## Notes-esMX: Lista positiva: recuerda a los buenos jugadores. Valoración con estrellas, notas, aviso al terminar una M+.
+## Notes-esES: Lista positiva: recuerda a los buenos jugadores. Valoración con estrellas, notas, aviso al terminar una M+.
+## Notes-ruRU: Положительный список: запоминайте хороших игроков. Оценка звёздами, заметки, запрос после M+.
 ## Author: Nerzors
-## Version: 0.46.0
+## Version: 2.0.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperRememberMeDB
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Midnight_Logo
 ## Category: Social
 
-Locales\enUS.lua
-Locales\deDE.lua
+Locales\Locales.xml
 RememberMe.lua
