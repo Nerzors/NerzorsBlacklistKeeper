@@ -346,8 +346,8 @@ local function buildChatFiltersTab(parent)
 
     managedSection(
         tr(L, "Whitelist (sender exclusions)", "Whitelist (sender exclusions)"),
-        "Senders here bypass all filters. Name-Realm pins a realm; a bare name matches any realm.",
-        "Senders here bypass all filters. Name-Realm pins a realm; a bare name matches any realm.",
+        "One name per line. Use Name-Realm to pin a specific realm; bare names match any realm.",
+        "One name per line. Use Name-Realm to pin a specific realm; bare names match any realm.",
         "whitelist",
         tr(L, "name[-realm]", "name[-realm]"),
         150)

@@ -1,0 +1,25 @@
+## Interface: 50504
+## Title: |cffbe4ae9NerzorsBlacklistKeeper|r Ignore Manager
+# ## Category: |cffbe4ae9NerzorsBlacklistKeeper|r
+## Group: NerzorsBlacklistKeeper
+## Notes: Ignore Manager for all your characters: one overview of every character's ignore list, queued changes for characters that are logged out, and players that no longer exist.
+## Notes-deDE: Ignore-Manager für alle Charaktere: eine Übersicht über die Ignorieren-Listen aller Charaktere, vorgemerkte Änderungen für ausgeloggte Charaktere und Spieler, die es nicht mehr gibt.
+## Notes-itIT: Gestione ignorati per tutti i personaggi: una panoramica degli elenchi ignorati di ogni personaggio, modifiche in coda per i personaggi non connessi e giocatori che non esistono più.
+## Notes-frFR: Gestion des ignorés pour tous vos personnages : une vue d'ensemble des listes d'ignorés de chaque personnage, des modifications en attente pour les personnages déconnectés et les joueurs qui n'existent plus.
+## Notes-ptBR: Gerenciador de ignorados para todos os personagens: uma visão geral das listas de ignorados de cada personagem, alterações pendentes para personagens desconectados e jogadores que não existem mais.
+## Notes-esMX: Gestor de ignorados para todos tus personajes: un resumen de las listas de ignorados de cada personaje, cambios pendientes para personajes desconectados y jugadores que ya no existen.
+## Notes-esES: Gestor de ignorados para todos tus personajes: un resumen de las listas de ignorados de cada personaje, cambios pendientes para personajes desconectados y jugadores que ya no existen.
+## Notes-ruRU: Менеджер игнора для всех персонажей: обзор чёрных списков каждого персонажа, отложенные изменения для персонажей не в игре и игроки, которых больше нет.
+## Author: Nerzors
+## Version: 2.1.0
+## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
+## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_classic_Logo
+## Category: Social
+
+Locales\Locales.xml
+AllCharacters.lua
+Queue.lua
+Prompt.lua
+Everywhere.lua
+Deleted.lua
+Matrix.lua

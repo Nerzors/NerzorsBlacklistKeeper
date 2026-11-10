@@ -169,7 +169,8 @@ local function sortedPlayers(filter)
     local out = {}
     for _, p in pairs(store().players) do
         if #(p.messages or {}) > 0 then
-            local hay = ((p.name or "") .. "-" .. (p.realm or "")):lower()
+
+            local hay = NBK:DisplayName(p.name, p.realm):lower()
             if filter == "" or hay:find(filter, 1, true) then
                 out[#out + 1] = p
             end
@@ -223,9 +224,8 @@ local function buildDetailWindow()
             if not detail.current then return end
             local p = detail.current
             NUL:Confirm({
-                text = (L["Delete all saved messages from %s-%s?"]
-                        or "Delete all saved messages from %s-%s?")
-                        :format(p.name or "?", p.realm or ""),
+                text = L["Delete all saved messages from %s?"]
+                        :format(NBK:DisplayName(p.name, p.realm)),
                 onAccept = function()
                     MessageHistory:ClearPlayer(p.name, p.realm)
                     f:Hide()
@@ -349,8 +349,8 @@ function MessageHistory:ShowDetail(name, realm)
 
     local hex = (p.class and NBK:GetClassHex(p.class)) or "ffffff"
     f:SetTitle((L["Saved messages"] or "Saved messages"))
-    detail.header:SetText(("|cff%s%s|r-%s   |cff888c99(%d)|r"):format(
-        hex, p.name or "?", p.realm or "", #(p.messages or {})))
+    detail.header:SetText(("%s   |cff888c99(%d)|r"):format(
+        NBK:DisplayName(p.name, p.realm, hex), #(p.messages or {})))
 
     local msgs = {}
     for _, m in ipairs(p.messages or {}) do msgs[#msgs + 1] = m end
@@ -431,7 +431,7 @@ local function makeRowBuilder()
             cells.class:SetClass(entry.class or "WARRIOR", "midnight")
 
             local hex = (entry.class and NBK:GetClassHex(entry.class)) or "ffffff"
-            cells.name:SetText(("|cff%s%s|r-%s"):format(hex, entry.name or "?", entry.realm or ""))
+            cells.name:SetText(NBK:DisplayName(entry.name, entry.realm, hex))
             cells.count:SetText((NBK.L["%d msgs"] or "%d msgs"):format(#(entry.messages or {})))
             cells.seen:SetText(fmtDate(entry.lastAt))
 
@@ -440,9 +440,8 @@ local function makeRowBuilder()
             cells.opts.view:SetScript("OnClick", open)
             cells.opts.remove:SetScript("OnClick", function()
                 LibStub("NerzorsUILib-1.0"):Confirm({
-                    text = (NBK.L["Delete all saved messages from %s-%s?"]
-                            or "Delete all saved messages from %s-%s?")
-                            :format(entry.name or "?", entry.realm or ""),
+                    text = NBK.L["Delete all saved messages from %s?"]
+                            :format(NBK:DisplayName(entry.name, entry.realm)),
                     onAccept = function()
                         MessageHistory:ClearPlayer(entry.name, entry.realm)
                         MessageHistory:RefreshTab()

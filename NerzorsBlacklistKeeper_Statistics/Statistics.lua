@@ -9,6 +9,9 @@ local TOP_N       = 8
 local MONTHS_BACK = 12
 local DAY         = 86400
 
+local MONTH_KEYS = { "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }
+
 local function L(key, fallback)
     local s = NBK.L and NBK.L[key]
     return s or fallback or key
@@ -59,8 +62,7 @@ local function buildMonthBuckets()
         keys[key] = 0
         order[#order + 1] = {
             key   = key,
-
-            label = date("%b", time({ year = y, month = m, day = 1, hour = 12 })),
+            label = L(MONTH_KEYS[m]),
         }
     end
     return keys, order
@@ -87,7 +89,8 @@ local function computeEntries(stats)
         end
 
         local reason = trim(e.reason)
-        if not reason or reason == "" then reason = L("No reason", "No reason") end
+        if not reason or reason == "" then reason = L("No reason", "No reason")
+        elseif NBK.ReasonText then reason = NBK:ReasonText(reason) end
         reasons[reason] = (reasons[reason] or 0) + 1
 
         local zone = trim(e.zone)
@@ -105,7 +108,7 @@ local function computeEntries(stats)
         encTotal = encTotal + n
         if n > 0 then
             encounters[#encounters + 1] = {
-                label = (e.name or "?") .. "-" .. (e.realm or ""),
+                label = NBK:DisplayName(e.name, e.realm),
                 value = n,
                 color = classColor(e.class),
             }

@@ -13,7 +13,7 @@ NBK:RegisterLocaleStrings("ruRU", {
     ["Maximum entries"] = "Максимум записей",
 
     ["Remove from recents"]                  = "Удалить из недавних",
-    ["Remove %s-%s from recents?"]           = "Удалить %s-%s из недавних?",
+    ["Remove %s from recents?"]           = "Удалить %s из недавних?",
     ["Clear recents..."]                     = "Очистить недавние...",
     ["Clear all %d recents entries?"]        = "Удалить все недавние записи (%d)?",
     ["Cleared %d recents entries."]          = "Удалено недавних записей: %d.",

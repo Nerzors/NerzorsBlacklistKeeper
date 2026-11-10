@@ -78,6 +78,7 @@ function StatsTab:_BuildTab(parent)
     t.encountersCard, t.encountersChart = rankedCard("Most encountered", "Most encountered")
 
     t.realmsCard, t.realmsChart = rankedCard("Top realms", "Top realms")
+    t.realmsCard:SetShown(not NBK:IsForever())
 
     t.chatCard = NUL:Card(content, { title = L("Chat impact", "Chat impact") })
     local cc = t.chatCard.content
@@ -144,10 +145,12 @@ function StatsTab:_Layout()
     placePair(ui.reasonsCard, ui.zonesCard)
     placePair(ui.classCard,   ui.encountersCard)
 
-    ui.realmsCard:SetWidth(w)
-    ui.realmsCard:ClearAllPoints()
-    ui.realmsCard:SetPoint("TOPLEFT", content, "TOPLEFT", 0, -y)
-    y = y + ui.realmsCard:GetHeight() + GAP
+    if ui.realmsCard:IsShown() then
+        ui.realmsCard:SetWidth(w)
+        ui.realmsCard:ClearAllPoints()
+        ui.realmsCard:SetPoint("TOPLEFT", content, "TOPLEFT", 0, -y)
+        y = y + ui.realmsCard:GetHeight() + GAP
+    end
 
     if ui.chatCard:IsShown() then
         ui.chatCard:SetWidth(w)

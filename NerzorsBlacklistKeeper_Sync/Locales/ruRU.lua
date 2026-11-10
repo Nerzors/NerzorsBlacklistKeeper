@@ -45,7 +45,7 @@ NBK:RegisterLocaleStrings("ruRU", {
 
     ["Auto-Sync blacklist push"]             = "Auto-Sync: запись блэклиста",
     ["%s wants to share an entry:"]          = "%s хочет поделиться записью:",
-    ["%s auto-shared %s-%s."]                = "%s автоматически отправил %s-%s.",
+    ["%s auto-shared %s."]                = "%s автоматически отправил %s.",
     ["Reason: %s"]                           = "Причина: %s",
     ["Decline"]                              = "Отказаться",
     ["From"]                                 = "От",

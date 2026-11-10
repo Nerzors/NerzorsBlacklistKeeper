@@ -11,7 +11,7 @@
 ## Notes-esES: Lista positiva: recuerda a los buenos jugadores. Valoración con estrellas, notas, aviso al terminar una M+.
 ## Notes-ruRU: Положительный список: запоминайте хороших игроков. Оценка звёздами, заметки, запрос после M+.
 ## Author: Nerzors
-## Version: 2.0.0
+## Version: 2.1.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperRememberMeDB
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Midnight_Logo

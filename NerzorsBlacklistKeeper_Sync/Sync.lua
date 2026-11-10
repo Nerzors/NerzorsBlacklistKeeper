@@ -436,11 +436,11 @@ local function buildAutoSyncPopup()
         local entry  = next_.entry or {}
         local hex    = (entry.class and NBK:GetClassHex(entry.class)) or "ffffff"
 
-        self:SetHeadline(("|cff%s%s|r-%s"):format(
-            hex, entry.name or "?", entry.realm or "?"))
+        self:SetHeadline(NBK:DisplayName(entry.name, entry.realm, hex))
 
-        local reasonText = (entry.reason and entry.reason ~= "") and entry.reason
-                                                                  or (L2["no reason logged"] or "-")
+        local reasonText = (entry.reason and entry.reason ~= "")
+                           and (NBK.ReasonText and NBK:ReasonText(entry.reason) or entry.reason)
+                           or (L2["no reason logged"] or "-")
         self:SetDetails({
             { label = L2["From"]   or "From",   value = next_.sender or "?" },
             { label = L2["Reason"] or "Reason", value = reasonText },
@@ -490,8 +490,8 @@ local function finalize(key)
             syncDebug("auto-push dropped: failed to parse entry from", session.sender)
             return
         end
-        NBK:Print((L["%s auto-shared %s-%s."] or "%s auto-shared %s-%s.")
-            :format(session.sender, entry.name or "?", entry.realm or "?"))
+        NBK:Print(L["%s auto-shared %s."]
+            :format(session.sender, NBK:DisplayName(entry.name, entry.realm)))
         showAutoSyncPopup(session.sender, entry, listId)
         return
     end
@@ -527,7 +527,7 @@ local function handleMessage(message, channel, senderFull)
     end
     if not t or not sid then return end
 
-    local me = UnitName("player") or ""
+    local me = NBK:PlayerName() or ""
     local meRealm = GetNormalizedRealmName() or ""
     local meFull  = me .. "-" .. meRealm
     if senderFull == meFull or senderFull == me then return end

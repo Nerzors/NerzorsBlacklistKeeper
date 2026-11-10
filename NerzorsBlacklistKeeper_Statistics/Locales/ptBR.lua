@@ -35,4 +35,8 @@ NBK:RegisterLocaleStrings("ptBR", {
     ["Instance"]           = "Instância",
     ["Officer"]            = "Oficial",
     ["Channel"]            = "Canal",
+
+    ["Jan"] = "jan", ["Feb"] = "fev", ["Mar"] = "mar", ["Apr"] = "abr",
+    ["May"] = "mai", ["Jun"] = "jun", ["Jul"] = "jul", ["Aug"] = "ago",
+    ["Sep"] = "set", ["Oct"] = "out", ["Nov"] = "nov", ["Dec"] = "dez",
 })

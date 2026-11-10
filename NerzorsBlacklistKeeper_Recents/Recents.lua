@@ -149,14 +149,15 @@ function Recents:ScanParty()
     end
 
     local zone = GetRealZoneText() or GetZoneText() or ""
-    local myName = UnitName("player")
+
+    local myName = NBK:PlayerName()
 
     local newSeen = {}
 
     for i = 1, GetNumGroupMembers() do
         local unit = "party" .. i
         if UnitExists(unit) and UnitIsPlayer(unit) then
-            local name, realm = UnitName(unit)
+            local name, realm = NBK:UnitPlayer(unit)
             if name and name ~= "" and name ~= myName then
                 if not realm or realm == "" then
                     realm = GetNormalizedRealmName()
@@ -187,11 +188,12 @@ local tabUI = {}
 local function sortedEntries(self_ref, filter)
     local list = self_ref:GetEntries()
     filter = filter and filter:lower() or ""
+    local byRealm = not NBK:IsForever()
     local out = {}
     for _, e in ipairs(list) do
         if filter == ""
            or (e.name or ""):lower():find(filter, 1, true)
-           or (e.realm or ""):lower():find(filter, 1, true)
+           or (byRealm and (e.realm or ""):lower():find(filter, 1, true))
            or (e.zone or ""):lower():find(filter, 1, true) then
             table.insert(out, e)
         end
@@ -272,7 +274,7 @@ local function makeRowBuilder(self_ref)
 
             local nameText
             local hex = entry.classColor or (entry.class and NBK:GetClassHex(entry.class)) or "ffffff"
-            nameText = ("|cff%s%s|r-%s"):format(hex, entry.name or "?", entry.realm or "")
+            nameText = NBK:DisplayName(entry.name, entry.realm, hex)
             cells.name:SetText(nameText)
 
             cells.count:SetText(("%d×"):format(entry.count or 1))
@@ -284,7 +286,7 @@ local function makeRowBuilder(self_ref)
                 local lw = NBK:GetModule("ListWindow")
                 if lw and lw.ShowAddDialog then
                     lw:ShowAddDialog({
-                        name  = (entry.name or "") .. "-" .. (entry.realm or ""),
+                        name  = NBK:DisplayName(entry.name, entry.realm),
                         class = entry.class,
                     })
                 end
@@ -292,8 +294,8 @@ local function makeRowBuilder(self_ref)
 
             cells.opts.remove:SetScript("OnClick", function()
                 LibStub("NerzorsUILib-1.0"):Confirm({
-                    text = (NBK.L["Remove %s-%s from recents?"] or "Remove %s-%s from recents?")
-                            :format(entry.name or "?", entry.realm or ""),
+                    text = NBK.L["Remove %s from recents?"]
+                            :format(NBK:DisplayName(entry.name, entry.realm)),
                     onAccept = function()
                         Recents:RemoveEntry(entry.name, entry.realm)
                         Recents:RefreshTab()

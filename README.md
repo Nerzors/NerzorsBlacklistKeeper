@@ -104,7 +104,8 @@ NBK also includes a positive **Remember Me** list for trusted players, recent pa
    ├── NerzorsBlacklistKeeper_Sync
    ├── NerzorsBlacklistKeeper_Recents
    ├── NerzorsBlacklistKeeper_RememberMe  (Retail only)
-   └── NerzorsBlacklistKeeper_Statistics
+   ├── NerzorsBlacklistKeeper_Statistics
+   └── NerzorsBlacklistKeeper_IgnoreManager
    ```
 
 3. `NerzorsBlacklistKeeper_Data` is a **hard dependency** for everything else -
@@ -130,6 +131,7 @@ NBK also includes a positive **Remember Me** list for trusted players, recent pa
 | `_Recents` | Recent party-mate tracking. | Optional |
 | `_RememberMe` | Positive list, star ratings, Mythic+ prompt. *(Retail only)* | Optional |
 | `_Statistics` | Charts dashboard over your blacklist. | Optional |
+| `_IgnoreManager` | The "All characters" view in the "Ignore list" tab shows the ignore lists of all your characters | Optional |
 
 ---
 

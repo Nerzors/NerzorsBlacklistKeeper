@@ -11,7 +11,7 @@
 ## Notes-esES: Guarda tus últimos compañeros de grupo (grupo, sin banda)
 ## Notes-ruRU: Запоминает ваших последних союзников по группе (группа, без рейдов)
 ## Author: Nerzors
-## Version: 2.0.0
+## Version: 2.1.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperRecentsDB
 ## SavedVariablesPerCharacter: NerzorsBlacklistKeeperRecentsCharDB

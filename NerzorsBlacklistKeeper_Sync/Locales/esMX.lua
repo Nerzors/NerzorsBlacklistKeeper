@@ -45,7 +45,7 @@ NBK:RegisterLocaleStrings("esMX", {
 
     ["Auto-Sync blacklist push"]             = "Auto-Sync: entrada de la lista negra",
     ["%s wants to share an entry:"]          = "%s quiere compartir una entrada:",
-    ["%s auto-shared %s-%s."]                = "%s compartió automáticamente a %s-%s.",
+    ["%s auto-shared %s."]                = "%s compartió automáticamente a %s.",
     ["Reason: %s"]                           = "Motivo: %s",
     ["Decline"]                              = "Rechazar",
     ["From"]                                 = "De",

@@ -11,7 +11,7 @@
 ## Notes-esES: Comparte la lista negra entre jugadores por el canal AddOn-Comm (susurro / hermandad). Añade la pestaña Compartir y los comandos /nbk share.
 ## Notes-ruRU: Обмен блэклистом между игроками через канал AddOn-Comm (шёпот / гильдия). Добавляет вкладку «Обмен» и команды /nbk share.
 ## Author: Nerzors
-## Version: 2.0.0
+## Version: 2.1.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperSyncDB
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Midnight_Logo

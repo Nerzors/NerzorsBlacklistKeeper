@@ -53,7 +53,7 @@ NBK:RegisterLocaleStrings("enUS", {
     ["View saved messages"]                   = true,
     ["Delete history"]                        = true,
     ["Clear messages"]                        = true,
-    ["Delete all saved messages from %s-%s?"] = true,
+    ["Delete all saved messages from %s?"] = true,
     ["Messages"]                              = true,
     ["%d msgs"]                               = true,
     ["Search name, realm..."]                 = true,

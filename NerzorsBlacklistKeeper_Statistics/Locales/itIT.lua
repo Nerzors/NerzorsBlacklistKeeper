@@ -35,4 +35,8 @@ NBK:RegisterLocaleStrings("itIT", {
     ["Instance"]           = "Istanza",
     ["Officer"]            = "Ufficiale",
     ["Channel"]            = "Canale",
+
+    ["Jan"] = "gen", ["Feb"] = "feb", ["Mar"] = "mar", ["Apr"] = "apr",
+    ["May"] = "mag", ["Jun"] = "giu", ["Jul"] = "lug", ["Aug"] = "ago",
+    ["Sep"] = "set", ["Oct"] = "ott", ["Nov"] = "nov", ["Dec"] = "dic",
 })

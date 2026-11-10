@@ -54,7 +54,7 @@ NBK:RegisterLocaleStrings("frFR", {
     ["View saved messages"]                   = "Voir les messages enregistrés",
     ["Delete history"]                        = "Supprimer l'historique",
     ["Clear messages"]                        = "Effacer les messages",
-    ["Delete all saved messages from %s-%s?"] = "Supprimer tous les messages enregistrés de %s-%s ?",
+    ["Delete all saved messages from %s?"] = "Supprimer tous les messages enregistrés de %s ?",
     ["Messages"]                              = "Messages",
     ["%d msgs"]                               = "%d msg",
     ["Search name, realm..."]                 = "Rechercher nom, royaume...",

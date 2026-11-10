@@ -35,4 +35,8 @@ NBK:RegisterLocaleStrings("esMX", {
     ["Instance"]           = "Estancia",
     ["Officer"]            = "Oficial",
     ["Channel"]            = "Canal",
+
+    ["Jan"] = "ene", ["Feb"] = "feb", ["Mar"] = "mar", ["Apr"] = "abr",
+    ["May"] = "may", ["Jun"] = "jun", ["Jul"] = "jul", ["Aug"] = "ago",
+    ["Sep"] = "sep", ["Oct"] = "oct", ["Nov"] = "nov", ["Dec"] = "dic",
 })

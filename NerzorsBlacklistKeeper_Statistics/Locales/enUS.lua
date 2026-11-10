@@ -35,4 +35,8 @@ NBK:RegisterLocaleStrings("enUS", {
     ["Instance"]           = true,
     ["Officer"]            = true,
     ["Channel"]            = true,
+
+    ["Jan"] = true, ["Feb"] = true, ["Mar"] = true, ["Apr"] = true,
+    ["May"] = true, ["Jun"] = true, ["Jul"] = true, ["Aug"] = true,
+    ["Sep"] = true, ["Oct"] = true, ["Nov"] = true, ["Dec"] = true,
 }, true)

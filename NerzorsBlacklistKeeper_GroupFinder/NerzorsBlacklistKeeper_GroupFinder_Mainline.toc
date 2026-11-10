@@ -11,7 +11,7 @@
 ## Notes-esES: Muestra el estado de la lista negra en el buscador de grupos: resultados marcados, avisos al apuntarte y alertas de solicitantes.
 ## Notes-ruRU: Показывает статус блэклиста в поиске групп: отмеченные результаты, предупреждения при подаче заявки и оповещения о кандидатах.
 ## Author: Nerzors
-## Version: 2.0.0
+## Version: 2.1.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## SavedVariables: NerzorsBlacklistKeeperGroupFinderDB
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Midnight_Logo

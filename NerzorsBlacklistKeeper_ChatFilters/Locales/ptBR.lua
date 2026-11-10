@@ -54,7 +54,7 @@ NBK:RegisterLocaleStrings("ptBR", {
     ["View saved messages"]                   = "Ver mensagens salvas",
     ["Delete history"]                        = "Excluir histórico",
     ["Clear messages"]                        = "Apagar mensagens",
-    ["Delete all saved messages from %s-%s?"] = "Excluir todas as mensagens salvas de %s-%s?",
+    ["Delete all saved messages from %s?"] = "Excluir todas as mensagens salvas de %s?",
     ["Messages"]                              = "Mensagens",
     ["%d msgs"]                               = "%d msg",
     ["Search name, realm..."]                 = "Buscar nome, reino...",

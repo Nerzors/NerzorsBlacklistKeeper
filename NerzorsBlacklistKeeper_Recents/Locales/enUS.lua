@@ -12,7 +12,7 @@ NBK:RegisterLocaleStrings("enUS", {
     ["Maximum entries"] = true,
 
     ["Remove from recents"]                  = true,
-    ["Remove %s-%s from recents?"]           = true,
+    ["Remove %s from recents?"]           = true,
     ["Clear recents..."]                     = true,
     ["Clear all %d recents entries?"]        = true,
     ["Cleared %d recents entries."]          = true,

@@ -43,7 +43,7 @@ NBK:RegisterLocaleStrings("enUS", {
 
     ["Auto-Sync blacklist push"]                        = true,
     ["%s wants to share an entry:"]                     = true,
-    ["%s auto-shared %s-%s."]                           = true,
+    ["%s auto-shared %s."]                           = true,
     ["Reason: %s"]                                      = true,
     ["Decline"]                                         = true,
     ["From"]                                            = true,

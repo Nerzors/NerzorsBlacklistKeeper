@@ -54,7 +54,7 @@ NBK:RegisterLocaleStrings("ruRU", {
     ["View saved messages"]                   = "Просмотреть сохранённые сообщения",
     ["Delete history"]                        = "Удалить историю",
     ["Clear messages"]                        = "Удалить сообщения",
-    ["Delete all saved messages from %s-%s?"] = "Удалить все сохранённые сообщения %s-%s?",
+    ["Delete all saved messages from %s?"] = "Удалить все сохранённые сообщения %s?",
     ["Messages"]                              = "Сообщения",
     ["%d msgs"]                               = "%d сообщ.",
     ["Search name, realm..."]                 = "Поиск: имя, сервер...",

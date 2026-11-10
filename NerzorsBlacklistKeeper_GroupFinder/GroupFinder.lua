@@ -138,7 +138,8 @@ local function showApplyBanner(dlg, name, realm, entry)
         dlg._nbkWarn = banner
     end
 
-    local reason = (entry.reason and entry.reason ~= "") and entry.reason
+    local reason = (entry.reason and entry.reason ~= "")
+                 and (NBK.ReasonText and NBK:ReasonText(entry.reason) or entry.reason)
                  or L["no reason logged"]
     dlg._nbkWarn.label:SetText(("|cffff6666⚠ %s:|r %s-%s - %s"):format(
         L["Blacklisted"], name, realm, reason))
@@ -181,7 +182,8 @@ local function checkApplicant(applicantID)
             if NBK:IsBlacklisted(n, r) then
                 local L = NBK.L
                 local entry = NBK:GetPlayer(n, r)
-                local reason = (entry and entry.reason and entry.reason ~= "") and entry.reason
+                local reason = (entry and entry.reason and entry.reason ~= "")
+                             and (NBK.ReasonText and NBK:ReasonText(entry.reason) or entry.reason)
                              or L["no reason logged"]
                 local hex = NBK:GetClassHex(entry and entry.class or nil)
                 NBK:Print((L["LFG applicant |cff%s%s|r-%s is blacklisted (%s)"])

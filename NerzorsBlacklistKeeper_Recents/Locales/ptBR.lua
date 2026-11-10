@@ -13,7 +13,7 @@ NBK:RegisterLocaleStrings("ptBR", {
     ["Maximum entries"] = "Máximo de entradas",
 
     ["Remove from recents"]                  = "Remover dos recentes",
-    ["Remove %s-%s from recents?"]           = "Remover %s-%s dos recentes?",
+    ["Remove %s from recents?"]           = "Remover %s dos recentes?",
     ["Clear recents..."]                     = "Limpar recentes...",
     ["Clear all %d recents entries?"]        = "Apagar todas as %d entradas recentes?",
     ["Cleared %d recents entries."]          = "Entradas recentes apagadas: %d.",

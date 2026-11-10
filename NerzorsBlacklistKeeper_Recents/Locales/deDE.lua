@@ -13,7 +13,7 @@ NBK:RegisterLocaleStrings("deDE", {
     ["Maximum entries"] = "Maximale Einträge",
 
     ["Remove from recents"]            = "Aus Letzte entfernen",
-    ["Remove %s-%s from recents?"]     = "%s-%s aus Letzte entfernen?",
+    ["Remove %s from recents?"]     = "%s aus Letzte entfernen?",
     ["Clear recents..."]               = "Letzte löschen...",
     ["Clear all %d recents entries?"]  = "Alle %d Letzte-Einträge löschen?",
     ["Cleared %d recents entries."]    = "%d Letzte-Einträge gelöscht.",

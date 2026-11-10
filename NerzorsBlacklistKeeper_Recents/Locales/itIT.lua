@@ -13,7 +13,7 @@ NBK:RegisterLocaleStrings("itIT", {
     ["Maximum entries"] = "Numero massimo di voci",
 
     ["Remove from recents"]                  = "Rimuovi dai recenti",
-    ["Remove %s-%s from recents?"]           = "Rimuovere %s-%s dai recenti?",
+    ["Remove %s from recents?"]           = "Rimuovere %s dai recenti?",
     ["Clear recents..."]                     = "Svuota i recenti...",
     ["Clear all %d recents entries?"]        = "Eliminare tutte le %d voci recenti?",
     ["Cleared %d recents entries."]          = "Voci recenti eliminate: %d.",

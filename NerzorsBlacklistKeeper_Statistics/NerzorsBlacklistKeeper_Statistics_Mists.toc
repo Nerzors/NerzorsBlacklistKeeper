@@ -11,7 +11,7 @@
 ## Notes-esES: Panel con gráficos de tu lista negra: crecimiento, motivos y zonas principales, reparto de clases, jugadores más encontrados e impacto en el chat.
 ## Notes-ruRU: Панель с графиками по вашему блэклисту: рост, основные причины и зоны, распределение по классам, самые частые встречи и влияние на чат.
 ## Author: Nerzors
-## Version: 2.0.0
+## Version: 2.1.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_classic_Logo
 ## Category: Social
