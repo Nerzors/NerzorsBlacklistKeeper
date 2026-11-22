@@ -43,6 +43,10 @@ local function buildGroupFinderTab(parent)
     addToggle("Warn before applying to a blacklisted leader",       "warnBeforeApply",   true)
     addToggle("Warn when a blacklisted player applies to my group", "warnOnApplicant",   true)
 
+    if NBK:GetModule("RememberMe") then
+        addToggle("Highlight remembered players (Remember Me)",     "flagRemembered",    true,  refreshVisible)
+    end
+
     local hint = NUL:CreateLabel(panel, {
         text  = L["Changes save automatically."],
         size  = "sm",

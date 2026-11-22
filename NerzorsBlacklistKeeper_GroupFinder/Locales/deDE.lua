@@ -7,5 +7,6 @@ NBK:RegisterLocaleStrings("deDE", {
     ["Flag blacklisted leaders in search results"]         = "Gelistete Anführer in Suchergebnissen markieren",
     ["Warn before applying to a blacklisted leader"]       = "Warnen, bevor ich mich bei einem gelisteten Anführer bewerbe",
     ["Warn when a blacklisted player applies to my group"] = "Warnen, wenn ein gelisteter Spieler meiner Gruppe beitreten will",
+    ["Highlight remembered players (Remember Me)"] = "Gemerkte Spieler hervorheben (Merken)",
     ["LFG applicant |cff%s%s|r-%s is blacklisted (%s)"]    = "Gruppensuche-Bewerber |cff%s%s|r-%s ist auf der Sperrliste (%s)",
 })

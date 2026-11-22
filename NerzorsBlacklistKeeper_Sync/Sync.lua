@@ -498,8 +498,7 @@ local function finalize(key)
 
     local text = "!NBK1!|" .. listId .. "\n" .. table.concat(lines, "\n")
 
-    local listSpec  = NBK:GetListType(listId)
-    local listLabel = (listSpec and listSpec.label) or listId
+    local listLabel = NBK:ListTypeLabel(listId) or listId
     NBK:Print((L["%s shared %d entries (%s)."]
         or "%s shared %d entries (%s)."):format(session.sender, count, listLabel))
 

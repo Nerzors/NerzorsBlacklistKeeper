@@ -27,6 +27,7 @@ function IgnoreAllChars:GetCharacters()
         local name, realm = strsplit("-", key, 2)
         local count = 0
         for _ in pairs(c.names or {}) do count = count + 1 end
+        local current = (key == me)
         out[#out + 1] = {
             key       = key,
             name      = name,
@@ -35,8 +36,9 @@ function IgnoreAllChars:GetCharacters()
             scannedAt = c.scannedAt,
             count     = count,
             planned   = self.PlannedCount and self:PlannedCount(key) or 0,
-            current   = (key == me),
-            stale     = not c.scannedAt or (now - c.scannedAt > self.STALE_AFTER),
+            current   = current,
+
+            stale     = not current and (not c.scannedAt or (now - c.scannedAt > self.STALE_AFTER)),
         }
     end
     table.sort(out, function(a, b)
@@ -85,6 +87,35 @@ function IgnoreAllChars:GetRows(characters)
     end
     table.sort(rows, function(a, b) return (a.name or ""):lower() < (b.name or ""):lower() end)
     return rows
+end
+
+function IgnoreAllChars:ForgetCharacter(key)
+    local ig = NBK.db and NBK.db.ignore
+    if not ig or not key or key == self:CurrentCharKey() then return false end
+    if ig.chars then ig.chars[key] = nil end
+    if ig.queue then ig.queue[key] = nil end
+    return true
+end
+
+function IgnoreAllChars:ConfirmForgetCharacter(ch)
+    local L = NBK.L
+    if not ch then return end
+    if ch.current then
+        NBK:Print(L["You are logged in on this character - it can't be removed."])
+        return
+    end
+    local label = (ch.name or "?") .. NBK:RealmSuffix(ch.realm)
+    LibStub("NerzorsUILib-1.0"):Confirm({
+        id   = "NBK_IGNORE_FORGET_CHAR",
+        text = L["Remove %s from the Ignore Manager? NBK forgets the ignore list it saved for this character and its planned changes. The game's own list stays as it is; logging in on the character brings it back."]
+                :format(label),
+        onAccept = function()
+            if IgnoreAllChars:ForgetCharacter(ch.key) then
+                NBK:Print(L["Removed from the Ignore Manager: %s"]:format(label))
+                IgnoreAllChars:Refresh()
+            end
+        end,
+    })
 end
 
 function IgnoreAllChars:OnEnable()

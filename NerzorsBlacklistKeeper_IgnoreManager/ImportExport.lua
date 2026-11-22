@@ -78,7 +78,7 @@ function IgnoreAllChars:ParseIgnoreText(text)
 end
 
 NBK:RegisterListType("ignore", {
-    label  = NBK.L["Ignore list"],
+    label  = "Ignore list",
     hidden = true,
     getEntries = function(opts)
         return IgnoreAllChars:ExportEntries((opts and opts.charKey) or IgnoreAllChars:CurrentCharKey())

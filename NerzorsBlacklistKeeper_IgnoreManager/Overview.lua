@@ -136,6 +136,9 @@ local function charTooltip(e, ch)
         end
         lines[#lines + 1] = colored(t.colors.text.muted, hint)
     end
+    if not ch.current then
+        lines[#lines + 1] = colored(t.colors.text.muted, L["Shift-right-click: remove this character from the Ignore Manager"])
+    end
     return table.concat(lines, "\n")
 end
 
@@ -313,7 +316,16 @@ local function charRowBuilder(row)
         end
     end)
     row:HookScript("OnLeave", function() NUL:HideTooltip() end)
-    row:SetScript("OnClick", function(self)
+
+    row:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+    row:SetScript("OnClick", function(self, button)
+        if button == "RightButton" then
+            if IsShiftKeyDown() then
+                NUL:HideTooltip()
+                IgnoreAllChars:ConfirmForgetCharacter(self._entry)
+            end
+            return
+        end
         IgnoreAllChars:_ToggleChar(ui.picked, self._entry)
     end)
 

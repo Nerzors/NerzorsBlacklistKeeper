@@ -120,4 +120,8 @@ NBK:RegisterLocaleStrings("esMX", {
     ["Adds the players in the text to the ticked characters. Nothing is removed there. On this character it happens right away, on the others at their next login."] = "Añade los jugadores del texto a los personajes marcados. Allí no se quita nada. En este personaje ocurre al momento, en los demás en su próximo inicio de sesión.",
     ["Import (%d)"] = "Importar (%d)",
     ["Import - ignored here: %d, planned for other characters: %d"] = "Importar - ignorados aquí: %d, previstos para otros personajes: %d",
+    ["Shift-right-click: remove this character from the Ignore Manager"] = "Mayús-clic derecho: quitar este personaje del Ignore Manager",
+    ["Remove %s from the Ignore Manager? NBK forgets the ignore list it saved for this character and its planned changes. The game's own list stays as it is; logging in on the character brings it back."] = "¿Quitar a %s del Ignore Manager? NBK olvida la lista de ignorados guardada para este personaje y sus cambios planeados. La lista del juego queda como está; al iniciar sesión con el personaje vuelve a aparecer.",
+    ["Removed from the Ignore Manager: %s"] = "Quitado del Ignore Manager: %s",
+    ["You are logged in on this character - it can't be removed."] = "Has iniciado sesión con este personaje: no se puede quitar.",
 })

@@ -529,14 +529,14 @@ local function buildDialog(globalName, titleKey)
     roleDD:SetPoint("TOPLEFT", 0, y); y = y - 34
 
     local cancel = NUL:Button(content, {
-        label = CANCEL or (L["Cancel"] or "Cancel"),
+        label = L["Cancel"],
         width = 80, height = 24,
         onClick = function() f:Hide() end,
     })
     cancel:SetPoint("BOTTOMRIGHT", 0, 0)
 
     local accept = NUL:Button(content, {
-        label = OKAY or "OK",
+        label = L["OK"],
         width = 80, height = 24, style = "accent",
     })
     accept:SetPoint("BOTTOMRIGHT", cancel, "BOTTOMLEFT", -6, 0)

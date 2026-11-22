@@ -122,4 +122,8 @@ NBK:RegisterLocaleStrings("enUS", {
     ["Adds the players in the text to the ticked characters. Nothing is removed there. On this character it happens right away, on the others at their next login."] = true,
     ["Import (%d)"] = true,
     ["Import - ignored here: %d, planned for other characters: %d"] = true,
+    ["Shift-right-click: remove this character from the Ignore Manager"] = true,
+    ["Remove %s from the Ignore Manager? NBK forgets the ignore list it saved for this character and its planned changes. The game's own list stays as it is; logging in on the character brings it back."] = true,
+    ["Removed from the Ignore Manager: %s"] = true,
+    ["You are logged in on this character - it can't be removed."] = true,
 }, true)

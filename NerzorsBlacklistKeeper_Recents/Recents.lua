@@ -81,6 +81,8 @@ end
 
 function Recents:RecordMember(name, realm, class, zone)
     if not name or name == "" then return nil end
+
+    if NBK:IsForever() then realm = "" end
     local list = self:GetEntries()
     local now  = time()
     local idx, entry = findIndex(list, name, realm)
@@ -158,6 +160,10 @@ function Recents:ScanParty()
         local unit = "party" .. i
         if UnitExists(unit) and UnitIsPlayer(unit) then
             local name, realm = NBK:UnitPlayer(unit)
+
+            if issecretvalue and (issecretvalue(name) or issecretvalue(realm)) then
+                name = nil
+            end
             if name and name ~= "" and name ~= myName then
                 if not realm or realm == "" then
                     realm = GetNormalizedRealmName()

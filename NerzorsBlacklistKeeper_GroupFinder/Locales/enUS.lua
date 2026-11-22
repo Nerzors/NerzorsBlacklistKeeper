@@ -7,5 +7,6 @@ NBK:RegisterLocaleStrings("enUS", {
     ["Flag blacklisted leaders in search results"]              = true,
     ["Warn before applying to a blacklisted leader"]            = true,
     ["Warn when a blacklisted player applies to my group"]      = true,
+    ["Highlight remembered players (Remember Me)"] = true,
     ["LFG applicant |cff%s%s|r-%s is blacklisted (%s)"]         = true,
 }, true)

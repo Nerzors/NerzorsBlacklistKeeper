@@ -7,5 +7,6 @@ NBK:RegisterLocaleStrings("ruRU", {
     ["Flag blacklisted leaders in search results"]         = "Отмечать лидеров из блэклиста в результатах поиска",
     ["Warn before applying to a blacklisted leader"]       = "Предупреждать перед заявкой к лидеру из блэклиста",
     ["Warn when a blacklisted player applies to my group"] = "Предупреждать, когда игрок из блэклиста подаёт заявку в мою группу",
+    ["Highlight remembered players (Remember Me)"] = "Выделять игроков из избранного",
     ["LFG applicant |cff%s%s|r-%s is blacklisted (%s)"]    = "Кандидат |cff%s%s|r-%s в блэклисте (%s)",
 })
