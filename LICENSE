@@ -8,9 +8,9 @@ Nerzors ADDON-NC-NRD-ND License v2.0
 └───────────────────────┘
 
 Applies to:
-- NerzorsQoL
 - NerzorsBlacklistKeeper (and its sub-AddOns: _Data, _ChatFilters,
-  _GroupFinder, _Sync, _Recents, _RememberMe, _Statistics)
+  _GroupFinder, _IgnoreManager, _Recents, _RememberMe, _Statistics,
+  _Sync)
 - NerzorsUILib
 
 Copyright (c) 2020-2026 Nerzors.DE
@@ -44,6 +44,8 @@ their own respective licenses.
 3) Where to get it
 
 Only from these Official Sources:
+
+- Official NBK website: https://nbk.nerzors.com/
 
 - NerzorsBlacklistKeeper:
   - GitHub Releases: https://github.com/Nerzors/NerzorsBlacklistKeeper
