@@ -40,12 +40,6 @@ NBK also includes a positive **Remember Me** list for trusted players, recent pa
 
 ---
 
-> [!IMPORTANT]
-> **Forever support is here.** One download now covers **Retail, Classic Era, Classic MoP
-> and WoW Forever**, the right version is picked automatically by your client, no separate package needed.
-> Two modules stay Retail-only because the game systems behind them don't
-> exist on Classic: `_GroupFinder` and `_RememberMe`. On Classic they simply don't show up in your AddOns list.
-
 | Property | Value |
 |----------|-------|
 | Author | Nerzors · [www.nerzors.de](https://www.nerzors.de) |
@@ -104,7 +98,7 @@ NBK also includes a positive **Remember Me** list for trusted players, recent pa
    ├── NerzorsBlacklistKeeper_GroupFinder (Retail only)
    ├── NerzorsBlacklistKeeper_Sync
    ├── NerzorsBlacklistKeeper_Recents
-   ├── NerzorsBlacklistKeeper_RememberMe  (Retail only)
+   ├── NerzorsBlacklistKeeper_RememberMe
    ├── NerzorsBlacklistKeeper_Statistics
    └── NerzorsBlacklistKeeper_IgnoreManager
    ```
@@ -130,7 +124,7 @@ NBK also includes a positive **Remember Me** list for trusted players, recent pa
 | `_GroupFinder` | LFG / Premade Group Finder warnings. *(Retail only)* | Optional |
 | `_Sync` | Peer-to-peer sharing + Auto-Sync. | Optional |
 | `_Recents` | Recent party-mate tracking. | Optional |
-| `_RememberMe` | Positive list, star ratings, Mythic+ prompt. *(Retail only)* | Optional |
+| `_RememberMe` | Positive list, star ratings, Group-Rating & Mythic+ prompt*(Retail only)*. | Optional |
 | `_Statistics` | Charts dashboard over your blacklist. | Optional |
 | `_IgnoreManager` | The "All characters" view in the "Ignore list" tab shows the ignore lists of all your characters | Optional |
 

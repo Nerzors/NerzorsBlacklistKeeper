@@ -128,7 +128,12 @@ function IgnoreAllChars:DiscardQueue()
     if core and core.RefreshTab then core:RefreshTab() end
 end
 
-function IgnoreAllChars:ExecuteQueue(alsoBlacklist)
+local function fullName(job)
+    if type(job.realm) == "string" and job.realm ~= "" then return job.name .. "-" .. job.realm end
+    return job.name
+end
+
+function IgnoreAllChars:ExecuteQueue(alsoBlacklist, toBlacklist)
     local IS   = NBK:GetModule("IgnoreSync")
     local core = NBK:GetModule("IgnoreManager")
     local q, me = queueRoot(false), self:CurrentCharKey()
@@ -138,6 +143,10 @@ function IgnoreAllChars:ExecuteQueue(alsoBlacklist)
     local L = NBK.L
     local done, failed, fromBlacklist = 0, 0, 0
     local count = #IS:GetIgnoreList()
+    local toAdd = {}
+    local function onBlacklistToo(job)
+        if toBlacklist and not NBK:IsBlacklisted(job.name, job.realm) then toAdd[#toAdd + 1] = fullName(job) end
+    end
     for key, job in pairs(cq) do
         local ignored = IS:IsIgnored(job.name, job.realm)
         if obsolete(key, job) then
@@ -158,6 +167,7 @@ function IgnoreAllChars:ExecuteQueue(alsoBlacklist)
         elseif ignored then
             cq[key] = nil
             done = done + 1
+            onBlacklistToo(job)
         elseif count >= CAP or IS._listFull then
             job.failed, job.triedAt = "full", time()
             failed = failed + 1
@@ -167,6 +177,7 @@ function IgnoreAllChars:ExecuteQueue(alsoBlacklist)
             cq[key] = nil
             done = done + 1
             count = count + 1
+            onBlacklistToo(job)
         else
             job.failed, job.triedAt = "error", time()
             failed = failed + 1
@@ -177,6 +188,15 @@ function IgnoreAllChars:ExecuteQueue(alsoBlacklist)
     NBK:Print(L["Ignore Manager - planned changes done: %d, failed: %d"]:format(done, failed))
     if fromBlacklist > 0 then
         NBK:Print(L["Removed from the blacklist: %d"]:format(fromBlacklist))
+    end
+
+    local onBlacklist = #toAdd > 0 and IS:ImportNames(toAdd) or 0
+    if onBlacklist > 0 then
+        NBK:Print(L["Put on the blacklist: %d"]:format(onBlacklist))
+    end
+    if fromBlacklist + onBlacklist > 0 then
+        local lw = NBK:GetModule("ListWindow")
+        if lw and lw.Refresh then lw:Refresh() end
     end
     if core.RefreshTab then core:RefreshTab() end
 end

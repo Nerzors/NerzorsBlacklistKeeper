@@ -13,6 +13,17 @@ local ui = {}
 
 local function charName(key) return key and (strsplit("-", key, 2)) or "?" end
 
+local function alsoToBlacklistLabel(n)
+    if n == 1 then return NBK.L["Also put on the blacklist"] end
+    return NBK.L["Also put them on the blacklist (%d)"]:format(n or 0)
+end
+
+function IgnoreAllChars:ToBlacklistDefault()
+    local s = NBK.db and NBK.db.settings or {}
+    if s.autoImportIgnore then return nil end
+    return s.askOnIgnore ~= false
+end
+
 local function rowBuilder(row)
     local theme = NUL:GetTheme()
     local who = NUL:CreateLabel(row, { text = "", justifyH = "LEFT", wrap = false })
@@ -56,6 +67,8 @@ local function build()
 
     ui.alsoBL = NUL:Checkbox(f.content, { label = "" })
     ui.alsoBL:SetWidth(420)
+    ui.toBL = NUL:Checkbox(f.content, { label = "" })
+    ui.toBL:SetWidth(420)
     ui.auto = NUL:Checkbox(f.content, { label = L["Run planned changes automatically from now on"] })
     ui.auto:SetWidth(420)
 
@@ -63,11 +76,12 @@ local function build()
         label = L["Run now"], width = 110, height = 26, style = "primary",
         onClick = function()
             local also = ui.alsoBL:IsShown() and ui.alsoBL:GetChecked()
+            local toBL = ui.toBL:IsShown() and ui.toBL:GetChecked()
             if ui.auto:GetChecked() and NBK.db and NBK.db.settings then
                 NBK.db.settings.ignoreQueueAuto = true
             end
             f:Hide()
-            IgnoreAllChars:ExecuteQueue(also)
+            IgnoreAllChars:ExecuteQueue(also, toBL)
         end,
     })
     run:SetPoint("BOTTOMRIGHT", 0, 0)
@@ -96,11 +110,14 @@ function IgnoreAllChars:ShowPrompt()
     local L = NBK.L
     local f = build()
 
-    local onBlacklist = 0
+    local onBlacklist, notOnBlacklist = 0, 0
     for _, item in ipairs(jobs) do
         local job = item.job
-        if job.op == "del" and NBK:IsBlacklisted(job.name, job.realm) then
+        local listed = NBK:IsBlacklisted(job.name, job.realm)
+        if job.op == "del" and listed then
             onBlacklist = onBlacklist + 1
+        elseif job.op ~= "del" and not listed then
+            notOnBlacklist = notOnBlacklist + 1
         end
     end
 
@@ -110,12 +127,20 @@ function IgnoreAllChars:ShowPrompt()
     ui.alsoBL:SetLabel(NBK:AlsoFromBlacklistLabel(onBlacklist))
     ui.alsoBL:SetChecked(false)
     ui.alsoBL:SetShown(onBlacklist > 0)
+
+    local toDefault = self:ToBlacklistDefault()
+    ui.toBL:SetLabel(alsoToBlacklistLabel(notOnBlacklist))
+    ui.toBL:SetChecked(toDefault and true or false)
+    ui.toBL:SetShown(notOnBlacklist > 0 and toDefault ~= nil)
     ui.auto:SetChecked(false)
 
-    ui.alsoBL:ClearAllPoints()
-    ui.alsoBL:SetPoint("TOPLEFT", ui.list.container, "BOTTOMLEFT", 0, -8)
-    ui.auto:ClearAllPoints()
-    ui.auto:SetPoint("TOPLEFT", onBlacklist > 0 and ui.alsoBL or ui.list.container, "BOTTOMLEFT",
-                     0, onBlacklist > 0 and -4 or -8)
+    local anchor, gap = ui.list.container, -8
+    for _, cb in ipairs({ ui.alsoBL, ui.toBL, ui.auto }) do
+        cb:ClearAllPoints()
+        cb:SetPoint("TOPLEFT", anchor, "BOTTOMLEFT", 0, gap)
+        if cb:IsShown() then anchor, gap = cb, -4 end
+    end
+
+    f:SetHeight((ui.alsoBL:IsShown() and ui.toBL:IsShown()) and 346 or 320)
     f:Show()
 end

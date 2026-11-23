@@ -359,7 +359,17 @@ local function setGroup(g)
     ui.list:ScrollToTop()
 end
 
+local applyNow
+
 local function apply()
+    if NBK.RunAsCleanup then
+        NBK:RunAsCleanup("ignoreTool", applyNow)
+    else
+        applyNow()
+    end
+end
+
+applyNow = function()
     local ticked = tickedEntries()
     if #ticked == 0 then return end
     local also = ui.alsoBL:IsShown() and ui.alsoBL:GetChecked()

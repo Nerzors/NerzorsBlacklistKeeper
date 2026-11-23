@@ -11,7 +11,7 @@
 ## Notes-esES: Gestor de ignorados para todos tus personajes: un resumen de las listas de ignorados de cada personaje, cambios pendientes para personajes desconectados y jugadores que ya no existen.
 ## Notes-ruRU: Менеджер игнора для всех персонажей: обзор чёрных списков каждого персонажа, отложенные изменения для персонажей не в игре и игроки, которых больше нет.
 ## Author: Nerzors
-## Version: 2.5.0-beta.1
+## Version: 2.5.0
 ## Dependencies: NerzorsBlacklistKeeper_Data, NerzorsBlacklistKeeper
 ## IconTexture: Interface\AddOns\NerzorsBlacklistKeeper_Data\Textures\NerzorsBlacklistKeeper_Forever_Logo
 ## Category: Social

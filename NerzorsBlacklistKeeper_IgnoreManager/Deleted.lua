@@ -5,6 +5,10 @@ local IgnoreAllChars = NBK:GetModule("IgnoreAllChars")
 if not IgnoreAllChars then return end
 
 function IgnoreAllChars:ForgetDeleted(rows, alsoBlacklist)
+
+    if NBK.RunAsCleanup and not NBK._removeBatch then
+        return NBK:RunAsCleanup("deleted", function() self:ForgetDeleted(rows, alsoBlacklist) end)
+    end
     local ig = NBK.db and NBK.db.ignore
     if not (ig and ig.chars) then return end
     local L = NBK.L
