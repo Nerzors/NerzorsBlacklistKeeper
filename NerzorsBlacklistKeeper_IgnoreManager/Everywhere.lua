@@ -225,3 +225,25 @@ function IgnoreAllChars:ConfirmEverywhere(rows, op)
     fitHeight()
     f:Show()
 end
+
+function IgnoreAllChars:RowFor(entry)
+    local key = NBK:NormalizeKey(entry.name, entry.realm)
+    if not key then return nil end
+    for _, row in ipairs(self:GetRows()) do
+        if row.key == key then return row end
+    end
+    return { key = key, name = entry.name, realm = entry.realm, class = entry.class, bl = entry,
+             on = {}, onCount = 0, gone = {}, goneCount = 0 }
+end
+
+local bt = NBK:GetModule("BlacklistTab")
+if bt and bt.AddRowMenuProvider then
+    bt:AddRowMenuProvider(function(entry, add)
+        local row = IgnoreAllChars:RowFor(entry)
+        if not row or row.deleted then return end
+
+        local p = IgnoreAllChars:PlanEverywhere({ row }, "add")
+        if #p.now + #p.plan == 0 then return end
+        add(NBK.L["Ignore everywhere"], function() IgnoreAllChars:ConfirmEverywhere({ row }, "add") end)
+    end)
+end

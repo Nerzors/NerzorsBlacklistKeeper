@@ -39,7 +39,7 @@ NBK:RegisterLocaleStrings("enUS", {
     ["Later"] = true,
     ["Discard"] = true,
     ["Planned changes discarded: %d"] = true,
-    ["Run planned ignore-list changes automatically at login"] = true,
+    ["Run planned changes automatically at login"] = true,
     ["Changes you plan in the Ignore Manager for another character run at that character's next login - with this option right away, otherwise NBK asks first. The blacklist is never changed automatically."] = true,
 
     ["Ignore everywhere"] = true,

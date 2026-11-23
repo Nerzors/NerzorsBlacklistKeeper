@@ -37,7 +37,7 @@ NBK:RegisterLocaleStrings("ruRU", {
     ["Later"] = "Позже",
     ["Discard"] = "Отбросить",
     ["Planned changes discarded: %d"] = "Отброшено запланированных изменений: %d",
-    ["Run planned ignore-list changes automatically at login"] = "Автоматически выполнять при входе запланированные изменения чёрного списка",
+    ["Run planned changes automatically at login"] = "Автоматически выполнять при входе запланированные изменения",
     ["Changes you plan in the Ignore Manager for another character run at that character's next login - with this option right away, otherwise NBK asks first. The blacklist is never changed automatically."] = "Изменения, которые вы планируете в менеджере игнора для другого персонажа, выполняются при его следующем входе - с этой настройкой сразу, иначе NBK сначала спросит. Блэклист никогда не меняется автоматически.",
 
     ["Ignore everywhere"] = "Игнорировать везде",

@@ -353,21 +353,43 @@ local function hookEllesmere()
     scanSoon()
 end
 
-local function applicantRemembered(appID, memberIdx)
-    if not rememberOn() or not appID or not memberIdx then return nil end
+local function applicantMember(appID, memberIdx)
+    if not appID or not memberIdx then return nil end
     if isSecret(appID) or not C_LFGList or not C_LFGList.GetApplicantMemberInfo then return nil end
     local ok, full = pcall(C_LFGList.GetApplicantMemberInfo, appID, memberIdx)
     if not ok or full == nil or isSecret(full) or type(full) ~= "string" or full == "" then return nil end
     local name, realm = strsplit("-", full, 2)
     if not name or name == "" then return nil end
     if not realm or realm == "" then realm = GetNormalizedRealmName() end
-    local e = rememberedPlayer(name, realm)
+    return name, realm
+end
+
+local function applicantRemembered(appID, memberIdx)
+    if not rememberOn() then return nil end
+    local name, realm = applicantMember(appID, memberIdx)
+    local e = name and rememberedPlayer(name, realm)
     if not e then return nil end
     return name, realm, e
 end
 
+local function applicantBlacklisted(appID, memberIdx)
+    if not isEnabled() or S().warnOnApplicant == false then return nil end
+    local name, realm = applicantMember(appID, memberIdx)
+    local e = name and NBK:GetPlayer(name, realm)
+    if not e then return nil end
+    return name, realm, e
+end
+GroupFinder._applicantBlacklisted = applicantBlacklisted
+
 local function markApplicant(row, nameFS, appID, memberIdx)
     row._nbkMark = nil
+    if applicantBlacklisted(appID, memberIdx) and nameFS and nameFS.SetTextColor then
+        showStripe(row, RED)
+        nameFS:SetTextColor(RED[1], RED[2], RED[3])
+        hideStars(row)
+        row._nbkMark = "blacklist"
+        return
+    end
     local rn, _rr, re = applicantRemembered(appID, memberIdx)
     if rn and nameFS and nameFS.SetTextColor then
         showStripe(row, GREEN)
@@ -453,18 +475,22 @@ end
 GroupFinder._scanApplicantsSoon = scanApplicantsSoon
 
 function GroupFinder:ApplicantState()
-    local bRows, bMarked, eRows, eMarked = 0, 0, 0, 0
+    local bRows, bMarked, eRows, eMarked, bBlack, eBlack = 0, 0, 0, 0, 0, 0
     for m in pairs(blizzApplicants) do
         if m.IsShown == nil or m:IsShown() then
             bRows = bRows + 1
             if m._nbkMark == "remembered" then bMarked = bMarked + 1 end
+            if m._nbkMark == "blacklist" then bBlack = bBlack + 1 end
         end
     end
     for l in pairs(euiLines) do
         eRows = eRows + 1
-        if l._nbkMark == "remembered" and (l.IsShown == nil or l:IsShown()) then eMarked = eMarked + 1 end
+        if l.IsShown == nil or l:IsShown() then
+            if l._nbkMark == "remembered" then eMarked = eMarked + 1 end
+            if l._nbkMark == "blacklist" then eBlack = eBlack + 1 end
+        end
     end
-    return bRows, bMarked, eRows, eMarked
+    return bRows, bMarked, eRows, eMarked, bBlack, eBlack
 end
 
 local ALERT = "|TInterface\\DialogFrame\\UI-Dialog-Icon-AlertNew:14:14|t"
@@ -523,6 +549,18 @@ local function onSearchEntryTooltip(tooltip, resultID)
     if tooltip.Show then tooltip:Show() end
 end
 GroupFinder._onSearchEntryTooltip = onSearchEntryTooltip
+
+local function onApplicantMemberEnter(member)
+    if type(member) ~= "table" or member._nbkMark ~= "blacklist" then return end
+    local tt = _G.GameTooltip
+    if not tt or type(tt.AddLine) ~= "function" then return end
+    local name, realm, entry = applicantBlacklisted(member._nbkAppID, member._nbkMemberIdx)
+    if not name then return end
+    tt:AddLine(" ")
+    tt:AddLine(warnLine(name, realm, reasonText(entry)), 1, 1, 1, true)
+    if tt.Show then tt:Show() end
+end
+GroupFinder._onApplicantMemberEnter = onApplicantMemberEnter
 
 local function hideApplyBanner()
     local dlg = _G.LFGListApplicationDialog
@@ -672,6 +710,10 @@ local function hookGroupFinderUI()
     end
     local av = _G.LFGListFrame.ApplicationViewer
     if av and av.HookScript then av:HookScript("OnShow", scanApplicantsSoon) end
+
+    if _G.LFGListApplicantMember_OnEnter then
+        hooksecurefunc("LFGListApplicantMember_OnEnter", function(member) pcall(onApplicantMemberEnter, member) end)
+    end
     return true
 end
 GroupFinder._hookGroupFinderUI = hookGroupFinderUI

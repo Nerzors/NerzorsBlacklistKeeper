@@ -37,7 +37,7 @@ NBK:RegisterLocaleStrings("ptBR", {
     ["Later"] = "Mais tarde",
     ["Discard"] = "Descartar",
     ["Planned changes discarded: %d"] = "Alterações planejadas descartadas: %d",
-    ["Run planned ignore-list changes automatically at login"] = "Executar automaticamente no login as alterações planejadas na lista de ignorados",
+    ["Run planned changes automatically at login"] = "Executar automaticamente no login as alterações planejadas",
     ["Changes you plan in the Ignore Manager for another character run at that character's next login - with this option right away, otherwise NBK asks first. The blacklist is never changed automatically."] = "As alterações que você planeja no Gerenciador de ignorados para outro personagem são executadas no próximo login dele - com esta opção imediatamente, caso contrário o NBK pergunta antes. A lista negra nunca é alterada automaticamente.",
 
     ["Ignore everywhere"] = "Ignorar em todos",

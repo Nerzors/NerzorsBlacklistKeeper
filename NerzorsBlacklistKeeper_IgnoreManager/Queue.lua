@@ -187,7 +187,7 @@ local function buildSettingsSection(panel, y)
     local _, ny = Config:AddSectionLabel(panel, y - 10, "Ignore Manager"); y = ny
     local cb
     cb, y = Config:AddCheckboxRow(panel, y,
-        "Run planned ignore-list changes automatically at login", {"ignoreQueueAuto"}, false)
+        "Run planned changes automatically at login", {"ignoreQueueAuto"}, false)
     NUL:AttachTooltip(cb, L["Changes you plan in the Ignore Manager for another character run at that character's next login - with this option right away, otherwise NBK asks first. The blacklist is never changed automatically."])
     return y - 8
 end
