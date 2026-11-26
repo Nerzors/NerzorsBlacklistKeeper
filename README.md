@@ -1,9 +1,8 @@
 <div align="center">
-<img src="https://media.nerzors.de/addons/nbk/nbk_logo.v2.png" alt="Nerzors Blacklist Keeper Banner"/>
+<img src="https://media.nerzors.de/addons/nbk/nbk_banner.v2.webp" width="680" alt="Nerzors Blacklist Keeper"/>
 
-<h1><img src="https://media.nerzors.de/addons/nbk/nbkAddon_Midnight.final-v3.png" width="32" alt="Nerzors Blacklist Keeper Logo"/> Nerzors Blacklist Keeper</h1>
-
-<p><i>Remember the players you never want to group with again... and the good ones too.</i></p>
+<!--<h1><img src="https://media.nerzors.de/addons/nbk/nbkAddon_Midnight.final-v3.png" width="32" alt="Nerzors Blacklist Keeper Logo"/> Nerzors Blacklist Keeper</h1>
+<p><i>Remember the players you never want to group with again... and the good ones too.</i></p>-->
 
 <p>
   <a href="https://www.curseforge.com/wow/addons/nerzorsblacklistkeeper">
