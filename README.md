@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://media.nerzors.de/addons/nbk/nbk_banner_v1-0.en.webp" width="680" alt="Nerzors Blacklist Keeper"/>
+<img src="https://media.nerzors.de/addons/nbk/nbk_banner_v1-1.en.webp" width="680" alt="Nerzors Blacklist Keeper"/>
 
 <!--<h1><img src="https://media.nerzors.de/addons/nbk/nbkAddon_Midnight.final-v3.png" width="32" alt="Nerzors Blacklist Keeper Logo"/> Nerzors Blacklist Keeper</h1>
 <p><i>Remember the players you never want to group with again... and the good ones too.</i></p>-->
