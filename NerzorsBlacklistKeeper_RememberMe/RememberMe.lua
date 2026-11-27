@@ -217,9 +217,54 @@ function RememberMe:Clear()
     return n
 end
 
+local ROLES = { TANK = true, HEALER = true, DAMAGER = true }
+
+local function clampRating(v)
+    v = tonumber(v)
+    if not v then return 4 end
+    v = math.floor(v + 0.5)
+    return v < 1 and 1 or v > 5 and 5 or v
+end
+
 if NBK.RegisterListType then
     NBK:RegisterListType("rememberme", {
         label = "Remember Me",
+        codeName = "Remember",
+        codeList = "remember",
+
+        toRecord = function(e)
+            return {
+                name    = e.name,
+                realm   = e.realm,
+                class   = e.class,
+                role    = e.role,
+                rating  = e.rating or 4,
+                notes   = e.notes,
+                zone    = e.zone,
+                run     = e.run,
+                addedBy = e.addedBy,
+                addedAt = (tonumber(e.addedAt) or 0) > 0 and e.addedAt or nil,
+            }
+        end,
+
+        fromRecord = function(r)
+            local name, realm = NBK:RecordName(r)
+            if not name then return nil end
+            local entry = {
+                name    = name,
+                realm   = realm,
+                class   = NBK:RecordClass(r.class),
+                rating  = clampRating(type(r.rating) == "number" and r.rating or nil),
+                notes   = NBK:RecordText(r.notes) or "",
+                role    = ROLES[r.role] and r.role or nil,
+                addedAt = NBK:RecordTime(r.addedAt) or time(),
+                zone    = NBK:RecordText(r.zone) or "",
+                addedBy = NBK:RecordText(r.addedBy) or "",
+                run     = NBK:RecordText(r.run),
+            }
+            entry.classColor = entry.class and NBK:GetClassHex(entry.class) or nil
+            return entry
+        end,
 
         getEntries = function() return entriesTable() end,
 

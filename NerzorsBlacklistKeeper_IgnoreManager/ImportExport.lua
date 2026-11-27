@@ -49,7 +49,8 @@ end
 
 function IgnoreAllChars:ParseIgnoreText(text)
     local parsed = NBK:ParseImport(collapse(text))
-    if not parsed.magic then return { ok = false, error = "header", rows = {}, skipped = 0 } end
+    if not parsed.magic then return { ok = false, error = "header", rows = {}, skipped = 0, parsed = parsed } end
+    if not parsed.ok then return { ok = false, error = "parse", rows = {}, skipped = 0, parsed = parsed } end
     if parsed.list ~= "ignore" then return { ok = false, error = "type", rows = {}, skipped = 0 } end
     local byKey = {}
     for _, row in ipairs(self:GetRows()) do byKey[row.key] = row end
@@ -80,6 +81,18 @@ end
 NBK:RegisterListType("ignore", {
     label  = "Ignore list",
     hidden = true,
+    codeName = "Ignore",
+    toRecord = function(e)
+        return { name = e.name, realm = e.realm, addedAt = (e.first or 0) > 0 and e.first or nil }
+    end,
+    fromRecord = function(r)
+        local name, realm = NBK:RecordName(r)
+        if not name then return nil end
+        return { name = name, realm = realm, first = NBK:RecordTime(r.addedAt) or 0 }
+    end,
+    codeMeta = function(opts)
+        return { from = (opts and opts.charKey) or IgnoreAllChars:CurrentCharKey() }
+    end,
     getEntries = function(opts)
         return IgnoreAllChars:ExportEntries((opts and opts.charKey) or IgnoreAllChars:CurrentCharKey())
     end,
@@ -112,7 +125,7 @@ local ex = {}
 
 local function refreshExport()
     local L = NBK.L
-    local text, count = NBK:ExportString({ list = "ignore", charKey = ex.source })
+    local text, count = NBK:ExportCode({ list = "ignore", charKey = ex.source })
     ex.box:SetText(NBK:EscapeForDisplay(text or ""))
     ex.count:SetText(L["%d players"]:format(count or 0))
 end
@@ -202,7 +215,7 @@ local function reparse(text)
     local p = IgnoreAllChars:ParseIgnoreText(text)
     if not p.ok then
         im.status:SetText(p.error == "type" and L["This text is not an ignore list."]
-                                             or L["Invalid input - missing !NBK1! header."])
+                                             or NBK:ImportErrorText(p.parsed))
         NUL.SetFontColor(im.status, c.state.danger)
         d:SetTargets({}, nil)
         return
